@@ -1,0 +1,13 @@
+﻿check,passed,detail
+batch_01_row_count,True,rows=78 expected=78
+batch_01_no_blank_questions,True,blank_questions=0
+batch_01_unique_questions,True,duplicates=0
+batch_01_adult_topic_coverage,True,actual=56 expected=56 missing=[]
+batch_01_child_topic_coverage,True,actual=22 expected=22 missing=[]
+batch_02_adult_flu_subgroup_coverage,True,actual=78 expected=78 missing=[]
+batch_02_child_flu_subgroup_coverage,True,actual=61 expected=61 missing=[]
+batch_02_row_count,True,rows=139 expected=139
+batch_02_no_blank_questions,True,blank_questions=0
+batch_02_unique_questions,False,duplicates=1
+batch_01_common_wording_not_exact_outcome_labels,True,exact_label_hits=0; examples=[]
+all_questions_use_last_year,True,all questions contain last year

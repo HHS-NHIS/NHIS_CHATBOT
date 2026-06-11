@@ -1,0 +1,15 @@
+question,expected_status,expected_contains,notes
+What percent of adults had current asthma in 2024?,ok,2024 NHIS estimate,total adult estimate
+Show current asthma among adults by sex in 2024.,ok,Highest among the returned rows,adult grouped estimate with high/low
+What percent of adults had current asthma?,ok,No year was specified,all years when no year given
+What percent of adults had current asthma last year?,ok,latest year available,last year maps to latest year in file
+What percent of male adults had current asthma in 2024?,ok,I list that subgroup first,subgroup first plus rest of grouping
+Show current asthma among adults by sex and race in 2024.,ok,multi-group crosstab,multi-group fallback explanation
+What percent of children ever had asthma in 2024?,ok,2024 NHIS estimate,child total estimate
+Show ADHD among children by age group.,ok,No year was specified,child grouped all years
+What percent of children were uninsured in 2023?,ok,2023 NHIS estimate,child total outcome estimate
+What is the SE for adults current asthma in 2024?,ok,Standard errors are not included,SE requested but unavailable
+What percent of adults had alien flu in 2024?,not_found,This estimate is not available,topic fallback
+Where can I find the 2023 NHIS public use files?,not_found,Questionnaires, Datasets, and Documentation,PUF fallback not yet full RAG
+What percent of adults had current asthma in the last 2 years?,ok,latest 2 years,last 2 years maps to only latest two available years
+Current asthma among gay adult males last 2 years,ok,Sexual orientation,gay adult males maps to sexual orientation first with crosstab explanation

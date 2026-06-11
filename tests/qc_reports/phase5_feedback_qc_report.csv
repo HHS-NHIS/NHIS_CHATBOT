@@ -1,0 +1,16 @@
+check,passed,detail
+ask_estimate_route_status_ok,PASS,"2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 8.6%"
+ask_estimate_route_mode,PASS,estimate
+faq_route_returns_source_or_safe_not_found,PASS,ok
+faq_has_source_cards,PASS,4
+feedback_append_status_ok,PASS,"{'status': 'ok', 'feedback_id': '1f99b07be0ab48d3a75cf7dc183ca5d1', 'feedback_csv': 'data/feedback/feedback_log.csv'}"
+feedback_row_count_incremented,PASS,before=0; after=1
+feedback_csv_exists,PASS,/mnt/data/phase5_build/dhis_nhis_chatbot/data/feedback/feedback_log.csv
+feedback_jsonl_exists,PASS,/mnt/data/phase5_build/dhis_nhis_chatbot/data/feedback/feedback_log.jsonl
+feedback_last_label_preserved,PASS,QC test feedback
+feedback_question_preserved,PASS,What percent of adults had current asthma last year?

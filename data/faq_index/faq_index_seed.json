@@ -1,0 +1,423 @@
+{
+  "generated_from": "curated CDC/NCHS NHIS source excerpts + uploaded participant resource documents",
+  "note": "Includes NHIS estimate/FAQ seed sources plus uploaded participant-facing resources and official participant links. Uploaded resources are used as source excerpts; they are not public URLs unless a URL is listed.",
+  "documents": [
+    {
+      "id": "nhis_home",
+      "title": "National Health Interview Survey",
+      "url": "https://www.cdc.gov/nchs/nhis/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "The National Health Interview Survey page is the main CDC/NCHS landing page for NHIS. It links to About NHIS, About the Data, Publications, the Early Release Program, Health Insurance, NHIS-Teen, participant information, and NHIS statistics including Data Query Systems. The page describes Data Query Systems as dashboards featuring NHIS data and Early Release as preliminary NHIS data on current topics."
+    },
+    {
+      "id": "about_nhis_overview",
+      "title": "About NHIS",
+      "url": "https://www.cdc.gov/nchs/nhis/about/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS is the National Health Interview Survey. NHIS is a national survey that monitors the health of the U.S. population. NHIS statistics provide insights into the health of people of different ages, sexes, races and ethnicities, geographic locations, and social and economic circumstances. The National Center for Health Statistics conducts NHIS. It is the nation's largest and oldest national health survey and began collecting data in 1957."
+    },
+    {
+      "id": "about_nhis_scope",
+      "title": "About NHIS - Scope and population",
+      "url": "https://www.cdc.gov/nchs/nhis/about/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS monitors health across the country by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults. NHIS collects data from civilians who do not live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental hospitals."
+    },
+    {
+      "id": "about_nhis_topics",
+      "title": "About NHIS - What is collected",
+      "url": "https://www.cdc.gov/nchs/nhis/about/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS collects data through personal interviews. One adult household member provides information about their own health and the health of others in their households. NHIS collects data about illness and chronic conditions, injuries and chronic pain, health-related behaviors, functioning and disability, healthcare access and use, health insurance coverage, and preventive services."
+    },
+    {
+      "id": "about_nhis_data_files",
+      "title": "About NHIS - Data files",
+      "url": "https://www.cdc.gov/nchs/nhis/about/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS public use data files are available to download in multiple formats. All potentially identifiable information has been removed to help ensure confidentiality. Restricted NHIS data files are available through the National Center for Health Statistics Research Data Center. Data documentation is available through the NHIS Questionnaires, Datasets, and Documentation page."
+    },
+    {
+      "id": "about_nhis_use",
+      "title": "About NHIS - How data are used",
+      "url": "https://www.cdc.gov/nchs/nhis/about/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NCHS staff use NHIS data to produce official national health estimates. NHIS can produce estimates for many subgroups of the U.S. population because it collects data from a large group of people. NHIS health statistics provide health information by demographic characteristics, geographic location, and social and economic circumstances."
+    },
+    {
+      "id": "documentation_gateway",
+      "title": "NHIS Questionnaires, Datasets, and Documentation",
+      "url": "https://www.cdc.gov/nchs/nhis/documentation/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "The NHIS Questionnaires, Datasets, and Documentation page is a gateway to data from NHIS. It provides survey methods, questionnaires, and other resources to collect NHIS data. It also provides technical information to help users understand, analyze, and use NHIS data, including analytic notes and references. Users can find survey instruments, data, and resources by year."
+    },
+    {
+      "id": "documentation_years",
+      "title": "NHIS documentation by year",
+      "url": "https://www.cdc.gov/nchs/nhis/documentation/index.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "The NHIS documentation page links to year-specific questionnaires, datasets, and documentation for 2019 through 2025 and to archived resources for earlier survey years. Use the relevant year page to find public use data files, questionnaires, analytic notes, and documentation."
+    },
+    {
+      "id": "dqt_overview",
+      "title": "NHIS Interactive Data Query Systems",
+      "url": "https://www.cdc.gov/nchs/nhis/products/data-query-systems.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS interactive data query systems provide health statistics based on preliminary and final NHIS data. These dashboards feature tables and graphs of preliminary and final NHIS data. Users can view total national estimates and estimates by demographic characteristics such as age, race, and ethnicity; geographic locations such as region and metro size; and social and economic circumstances such as family income."
+    },
+    {
+      "id": "dqt_final_data",
+      "title": "NHIS Interactive Data Query Systems - Final data",
+      "url": "https://www.cdc.gov/nchs/nhis/products/data-query-systems.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "Estimates based on 2019 through 2024 NHIS final data are available for adults and children. The NHIS final-data dashboards include annual estimates for the U.S. child population ages 17 and younger by demographic subgroup and annual estimates for the U.S. adult population by demographic subgroup."
+    },
+    {
+      "id": "dqt_preliminary_data",
+      "title": "NHIS Interactive Data Query Systems - Preliminary data",
+      "url": "https://www.cdc.gov/nchs/nhis/products/data-query-systems.html",
+      "source_type": "cdc_nhis_webpage",
+      "text": "NHIS preliminary data query systems include estimates based on preliminary data for six-month periods and, before 2025, for three-month periods. These preliminary systems focus on people 18 years and older across the country."
+    },
+    {
+      "id": "participant_values_language_1",
+      "title": "Participant values language: overview dialogue",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "Values and Beliefs Language Resource Introduction Overview Dialogue Respondent: What’s in this for me? How am I going to directly benefit from participating? FR: That’s a great and fair question! I have a lot of answers, but I don’t want to waste your time. So tell me, what are you angriest or most worried about, or proudest of or most grateful for right now in this country? Respondent: I’m angry that the government is butting its head where it doesn’t belong. I’m worried that my data is next to get stolen. I’m proud that I’ve keep my family safe so far and I’m most grateful for the freedom to say no to you right now. FR: I totally agree with you that a lot of what the government is doing these days is scary and wrong. And I deeply respect the care and protection you’ve provided for your family. I work hard to provide the same for mine! It sounds like you think I’m here to help the bad actors and expose you to harm. What else do you feel is important to add to this? Respondent: That’s about it. I don’t think you’re a bad person. I understand you’re just doing your job. But I’m not going to let you steal my family’s privacy and peace of mind. FR: I admire your commitment to your family and I share your values – in fact, protecting people’s privacy is a core value of mine, and it’s part of why I do this job. Respondent: What are you talking about? FR: In NHIS, you get to decide which information to share. You don’t need to tell me your name – you can use an alias. And your address is kept entirely separate from your answers. Why don’t we try getting started and I can show you what I mean. Respondent: But I don’t want to tell the government anything. I just don’t trust",
+      "excerpt": "Values and Beliefs Language Resource Introduction Overview Dialogue Respondent: What’s in this for me? How am I going to directly benefit from participating? FR: That’s a great and fair question! I have a lot of answers, but I don’t want to waste your time. So tell me, what are you angriest or most worried about, or proudest of or most grateful for right now in this country? Respondent: I’m angry that the government is butting its head where it doesn’t belong. I’m worried that my data is next to get stolen. I’m pro",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_2",
+      "title": "Participant values language: personal privacy and choice",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "them. FR: I get that! So many people in government have given us all reasons to be wary. Respondent: Exactly. FR: I wouldn’t be doing this job if I thought I was putting you at risk. Statistical agencies are separate – and different – from the rest of the government. Many strict laws protect your data – everyone who works with your data has taken an oath for life to protect your confidential data – or serve a 5-year jail sentence and pay a $250,000 fine. We take your privacy extremely seriously. You can read more about it in the confidentiality brochure. Respondent: It just seems like it would be better if the government didn’t collect this data at all. FR: I get that. It can seem like the alternative to this survey is doing nothing. But that’s not necessarily true. The alternative could be a government data mining operation that takes away the power this survey gives you to decide which questions to answer. Every refusal is a little more ammunition for those who want to switch over to that system. Every completed interview is a win for personal privacy and your right to decide. What would you do if you had the power to choose whether to help those who respect and protect your privacy, or aid those who think they have the right to take whatever they want? Values often held by reluctant respondents Personal Responsibility Individual accountability for health choices, such as diet, exercise, and lifestyle decisions Patriotism/Traditional American values National pride Support for American institutions and traditions America #1 America First Personal privacy My information is mine Government has no business knowing my personal affairs Personal choice Health freedom No",
+      "excerpt": "them. FR: I get that! So many people in government have given us all reasons to be wary. Respondent: Exactly. FR: I wouldn’t be doing this job if I thought I was putting you at risk. Statistical agencies are separate – and different – from the rest of the government. Many strict laws protect your data – everyone who works with your data has taken an oath for life to protect your confidential data – or serve a 5-year jail sentence and pay a $250,000 fine. We take your privacy extremely seriously. You can read more a",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_3",
+      "title": "Participant values language: local/rural community",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "mandates or authority-imposed restrictions States rights Skepticism of Government Intervention Preference for limited government Skepticism toward government-run healthcare systems Local community My community’s needs should be met Local community needs/well-being (services, care, doctors, hospitals, clinics) Rural communities Mental health services near me Fairness Against programs that prioritize or only help particular groups (or people other than me) Against special treatment for particular groups (or people other than me)(undocumented immigrants, the “liberal elite”, doctors and nurses, white collar workers, urban intellectuals, etc) Against policies with loopholes that let people get away with things Against health insurance that doesn’t cover what the policy says it will cover (or health insurance that changes what’s covered after you’ve purchased the policy) Being treated with respect Truthfulness/Government transparency Clear communication Not lying Officials should regularly inform the public about their actions and decisions and explain the reasons behind them Government accountability Officials should be held responsible for the outcome of their actions and decisions Elected representatives should work to support the best interests of the public, as defined by the public Evidence-based policy Data-driven decision making Science-based decision making Representative democracy Voting Ordinary people having a say in the direction country is going and policy/spending decisions What I want is what should happen Fiscal Responsibility Reduce government waste Increase government efficiency Cost cutting measures Personal health & family health Physical and",
+      "excerpt": "mandates or authority-imposed restrictions States rights Skepticism of Government Intervention Preference for limited government Skepticism toward government-run healthcare systems Local community My community’s needs should be met Local community needs/well-being (services, care, doctors, hospitals, clinics) Rural communities Mental health services near me Fairness Against programs that prioritize or only help particular groups (or people other than me) Against special treatment for particular groups (or people ot",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_4",
+      "title": "Appendix C Values and Beliefs Language Resource",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "psychological health of my loved ones Research on specific health condition ( their own or their family members’) Ways to reduce medication costs/health care bills Beliefs about NHIS FRs often held by reluctant respondents (for use in accusation audit) Specific, reasonable (given the respondent’s beliefs and values) beliefs a reluctant might hold about NHIS FRs in general and you in particular It sounds like you think it’s my job to help the government meddle in your life, and maybe even try to control or hurt you. It sounds like you think I’m asking you to help an organization you distrust – one that you believe badly hurt people you care about It sounds like you think I’m asking you to help an organization that betrayed you, your family, and your community It sounds like you think I’m asking you to help an organization composed of power-hungry megalomaniacs who have nothing but contempt for you and people like you It sounds like you think it’s my job to convince you to spend your limited free time doing something that won’t benefit you or anyone you care about It sounds like you think I’m asking you to spend time on an activity without an immediate obvious benefit for you It sounds like I’m asking you to entrust your sensitive health information to an organization that will be careless with it and will allow harm to come to you via unintended disclosure (It sounds like you think I’m asking you to willingly submit to that – and you’re understandably angry that I’d ask that of you.) It sounds like you think I have no idea/don’t understand at all why you’re angry and hurt “What else is there that you feel is important to add to this?” Value language to explain the NHIS",
+      "excerpt": "psychological health of my loved ones Research on specific health condition ( their own or their family members’) Ways to reduce medication costs/health care bills Beliefs about NHIS FRs often held by reluctant respondents (for use in accusation audit) Specific, reasonable (given the respondent’s beliefs and values) beliefs a reluctant might hold about NHIS FRs in general and you in particular It sounds like you think it’s my job to help the government meddle in your life, and maybe even try to control or hurt you.",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_5",
+      "title": "Participant values language: personal privacy and choice",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "You can affirm the respondent by explaining why you work on the NHIS using language and reflecting values that resonate with the respondent. Of course, only use statements that apply to you! But there are likely more options than you might think. Despite the effectiveness of media designed to maximize division, many people across political lines share the same values. “I do this work because…” Personal responsibility Because I believe in personal responsibility and… (can append to any of the following) Because doing this work is how I live my values of personal responsibility and… Traditional American values /Patriotism Because I believe in defending the American way of life. Because I believe in preserving and defending American institutions and traditions, and that means doing my part to ensure the continued strength of this cornerstone/vital pillar of American democracy and progress. NHIS is run with integrity, and the data reflects the experiences of real Americans. The insights derived from this survey have been informing decisions that have protected the well-being of our citizens for nearly 70 years. Personal choice NHIS data helps us take charge of our own health through lifestyle choices that align with our values. For example, a study using NHIS data showed that “weekend warriors” who get all their exercise on Saturday and Sunday lower their risk of early death as much as people who get that same amount of exercise spread out through the week. What mattered was exercising the recommended amount of time per week, not when they did it. That’s the sort of information we can use to make informed choices Personal privacy NHIS is the gold standard survey not only in",
+      "excerpt": "You can affirm the respondent by explaining why you work on the NHIS using language and reflecting values that resonate with the respondent. Of course, only use statements that apply to you! But there are likely more options than you might think. Despite the effectiveness of media designed to maximize division, many people across political lines share the same values. “I do this work because…” Personal responsibility Because I believe in personal responsibility and… (can append to any of the following) Because doin",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_6",
+      "title": "Participant values language: local/rural community",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "data quality but also in data security. They have never had a data breach. You don’t need to tell me your name – you can use an alias. And your address is kept entirely separate from your answers. In NHIS, you get to decide which information to share. The alternative to this survey is a data mining operation that takes away the power this survey gives you to decide what to keep private. Every refusal is a little more ammunition for those who want to switch over to that system. NHIS walks the walk when it comes to prioritizing confidentiality and keeping American’s data safe and secure. The systems that some people want to replace this survey with wouldn’t be nearly as secure, nor give you nearly as much control over what you want to share and what you want to keep to yourself. Because I believe people like us deserve to be treated with respect and given the option to decide exactly what information we want the government to have. NHIS puts the power in your hands – you decide which questions to answer and you don’t even have to tell me your real name. It’s a way for us to help the people fighting for our community and values, while preserving our ability to keep our private business private. The alternatives that some people want to replace this survey with wouldn’t offer you anything like this level of control. Service to my local community/rural communities/Fairness Because doing this work is how I live my values of personal responsibility and service to rural families - especially __<Name> County___ families . I want to be sure our interests are represented, and people here have the fair chance we deserve to be included. It’s how I do my part to keep us safe and",
+      "excerpt": "data quality but also in data security. They have never had a data breach. You don’t need to tell me your name – you can use an alias. And your address is kept entirely separate from your answers. In NHIS, you get to decide which information to share. The alternative to this survey is a data mining operation that takes away the power this survey gives you to decide what to keep private. Every refusal is a little more ammunition for those who want to switch over to that system. NHIS walks the walk when it comes to p",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_7",
+      "title": "Participant values language: local/rural community",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "healthy. Because I believe our community deserves to be heard and represented This work is important to me, and I work as hard as I do, because I want people in our area have a fair chance to have their interests and experiences represented in this important survey/national data resource. My local community/Government accountability Because I’m committed to demanding transparency and accountability from our government. The NHIS offers reliable data that shines a light on the real impacts of policy—especially on <rural communities/veterans/kids/families/marginalized communities>—helping us fight for the services we deserve/ a fairer society/ the services and systems our families need and deserve. Use the idea of fairness in a positive way: The value of fairness is universally important. People want to feel respected. If they feel they’ve been treated fairly, they’re more likely to cooperate. You can set the stage for honest and empathic communication by saying: I want you to feel like you are being treated fairly at all times. So please stop me at any time if you feel I’m being unfair and we’ll address it. I want to be sure you have a fair chance to make your voice heard. Government transparency and accountability/ Truthfulness Because doing this work is how I do my part to ensure government accountability. NHIS data is the best quality, it’s trusted, and it’s used to track/shine a light on how government policies impact working families. Because I believe in supporting the institutions that tell the truth to the American public Evidence-based policy/Data-driven decisions Because I believe in the power of science and data to drive informed decisions. NHIS data stands",
+      "excerpt": "healthy. Because I believe our community deserves to be heard and represented This work is important to me, and I work as hard as I do, because I want people in our area have a fair chance to have their interests and experiences represented in this important survey/national data resource. My local community/Government accountability Because I’m committed to demanding transparency and accountability from our government. The NHIS offers reliable data that shines a light on the real impacts of policy—especially on <ru",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_8",
+      "title": "Participant values language: fiscal responsibility",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "apart from partisan spin by providing unbiased, meticulously gathered, highest quality information. That’s essential for building policies that work for all of us. Because I believe that truth and facts should guide our decisions. The NHIS provides rigorous, evidence-based data necessary for evidence-based policy. It’s about ensuring that the change we need isn’t derailed by misinformation. Because I believe policymakers need accurate data—not just what special interests or big corporations or <terms used by respondent> want them to see. NHIS data is independent, accurate, and gives a real picture of how policies affect everyday Americans like us. I believe truth and facts should guide policy, not feelings and fears. The NHIS provides accurate data, with no slant or political spin, the kind of data necessary for evidence-based policy. I’m proud to work on a survey whose data has been trusted for decades by people across the political spectrum. The agency running the survey - NCHS - is housed within the CDC for administrative efficiency, but as a statistical agency, they’re independent and neutral. They never touch policy or make recommendations. They just collect the high quality data and publish the statistics that others can use to make informed, data-backed decisions. Representative democracy Because I believe our communities deserve to be heard and represented. The NHIS data can be used to show who’s getting the short end of the stick in health care, which makes it possible to hold power accountable and gives us the tools to push for what’s right and fair. Fiscal Responsibility Because I believe in fighting government waste and making sure taxpayer dollars—your",
+      "excerpt": "apart from partisan spin by providing unbiased, meticulously gathered, highest quality information. That’s essential for building policies that work for all of us. Because I believe that truth and facts should guide our decisions. The NHIS provides rigorous, evidence-based data necessary for evidence-based policy. It’s about ensuring that the change we need isn’t derailed by misinformation. Because I believe policymakers need accurate data—not just what special interests or big corporations or <terms used by respon",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_9",
+      "title": "Appendix C Values and Beliefs Language Resource",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "money—aren’t spent on bad policies based on bad data. The NHIS is one of the few data sources that isn’t influenced by politics or big tech algorithms. And because it asks the same questions over the years, it can be used to track trends and see what programs are working and which aren’t; which are effective and cost effective – and which should be cut Countering lobbyist spin I believe in the importance of human welfare over corporate welfare. I believe we need accurate data about real people’s health experiences, to prevent corporate lobbyists from dominating the public narrative and setting policy agendas. NHIS provides the clear, data-driven insights we need to counter corporate profit motives. I believe in the importance of free market principles. I believe too much government interference is just going to raise health care costs and drive down quality. By giving real Americans a chance to talk about their experiences with health care, NHIS data can be used to by those who are fighting to keep government out of where it doesn’t belong. I believe in ensuring the availability of high-quality data-driven insights about real people’s experiences that can be used to counter lobbyist spin. Science In this time when so much science is being slashed, slandered, or interfered with, NHIS has never been more important. Its nearly 70 year history of independence, rigor, accuracy, and reliability continues to the present day, providing the highest quality data that researchers rely on even - and especially - when their own projects get cut. If you want to support U.S. science and scientists, participation in the NHIS is a practical and direct way to do it.",
+      "excerpt": "money—aren’t spent on bad policies based on bad data. The NHIS is one of the few data sources that isn’t influenced by politics or big tech algorithms. And because it asks the same questions over the years, it can be used to track trends and see what programs are working and which aren’t; which are effective and cost effective – and which should be cut Countering lobbyist spin I believe in the importance of human welfare over corporate welfare. I believe we need accurate data about real people’s health experiences,",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "participant_values_language_10",
+      "title": "Appendix C Values and Beliefs Language Resource",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_values_language",
+      "text": "Value-of-NHIS-participation frames and questions General calibrated questions General format How can we make this work? What do we need to do to move forward? What would you need to… How could we make it possible for you to… What might it feel like to… How important is it to you that… When you think about…how does that make you feel about [contributing your voice/adding your perspective] What would you do if you knew that….? What happens if…? NHIS FR-suggested general open-ended “what” questions: “What can I say to convince you that your information is important?” Ask “What works for you?” If they say “I’m not interested” I go into my spiel “I understand; I had not heard of this. . I was astonished it's been done for 65 years…” If they did read it or not, ask them what caught their attention in the letter: they either admit they had not read it so you can have a chance to explain or if they read it what was their objection. If they still say no, let them know about follow up letter and why because they are so important” Self-actualization & transcendence Each of these talking points and questions frame NHIS participation as an opportunity for self-actualization and transcendence, a way for the respondent to act in accordance with their values and further causes they care about. They are organized by respondent values. Patriotism: Traditional American way of life/values/institutions Why you work NHIS: It’s important to me that gold standard American traditions like the NHIS are sustained and strengthened. It’s a proud American institution worth preserving. I believe in defending the American way of life, and that means making sure our leaders don’t rely on biased,",
+      "excerpt": "Value-of-NHIS-participation frames and questions General calibrated questions General format How can we make this work? What do we need to do to move forward? What would you need to… How could we make it possible for you to… What might it feel like to… How important is it to you that… When you think about…how does that make you feel about [contributing your voice/adding your perspective] What would you do if you knew that….? What happens if…? NHIS FR-suggested general open-ended “what” questions: “What can I say to",
+      "source_file": "Appendix C. Values language.docx"
+    },
+    {
+      "id": "impact_talking_points_1",
+      "title": "NHIS impact: cancer screening guidelines",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "National Health Interview Survey: Providing Insights for Impact Overview 1: NHIS provides accurate, trusted data that people and organizations use to Improve medical care Develop effective health and safety programs that help people prevent and manage medical conditions Improve access to needed medical devices and life-saving medicine Support better quality of life Overview 2: As the nation’s gold standard health survey, NHIS provides an accurate and objective understanding of the nation’s health. NHIS data are also used to inform efficient, effective, and cost-effective programs and policies. Note that NCHS and the NHIS never make policy recommendations and never engage in advocacy. Other people use the data to illuminate problems or design solutions. Shared with NHIS FRs Cancer Screening Guidelines NHIS statistics are used to update guidelines for cancer screenings. These guidelines tell doctors when people should get screened for cancer to catch it early. Groups like the American Cancer Society (ACS) and the US Preventive Services Task Force (USPSTF) use NHIS data to decide how to update their guidelines for cervical, breast, and colorectal cancer screening. These groups use NHIS data to learn who does and who does not follow cancer screening guidelines, and why. Screening recommendation updates can save lives This NHIS data helps them to update the guidelines to save the most lives, while minimizing the burden on healthy people. For example, in 2018, the American Cancer Society (ACS) used data from the NHIS to make an important change – lowering the recommended age for average-risk individuals to start colon cancer screening from 50 to 45. Doctors rely on cancer",
+      "excerpt": "National Health Interview Survey: Providing Insights for Impact Overview 1: NHIS provides accurate, trusted data that people and organizations use to Improve medical care Develop effective health and safety programs that help people prevent and manage medical conditions Improve access to needed medical devices and life-saving medicine Support better quality of life Overview 2: As the nation’s gold standard health survey, NHIS provides an accurate and objective understanding of the nation’s health. NHIS data are als",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_2",
+      "title": "NHIS impact: cancer screening guidelines",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "screening recommendations Doctors rely on these recommendations to help them determine when to recommend screenings to patients. Getting screened at the right age can make a big difference – it improves the chances of catching cancer early when it’s most treatable. Early detection can not only reduce the cost and burden of treatment but also improve survival rates. Sample talking points Organizations like the American Cancer Society use NHIS data to update the guidelines that doctors use to decide when to recommend screenings that find cancer early -before it spreads, and symptoms start. NHIS data are used to update cancer screening guidelines that doctors use. Thanks to these updates, people are more likely to get screened at the right age and frequency to help catch cancer early. Too many of us know people who have been affected by cancer. NHIS data are used to update cancer screening guidelines that can save lives. NHIS data informed the update to the recommended age to start colon cancer screening: In 2018 it changed from50 to 45. Anxiety disorder screening recommendation FR Training Version The U.S. Preventive Services Task Force is a group of independent experts who volunteer their time to make science-backed recommendations about preventive health care. Basically, they help doctors decide the best ways to keep patients healthy. A recent recommendation, in 2023, was that primary care providers should screen adults under the age of 65 for anxiety disorders. NHIS data were used to inform that recommendation. This could make a real difference because more screenings mean more people with those disorders will get diagnosed and receive the help they need, including",
+      "excerpt": "screening recommendations Doctors rely on these recommendations to help them determine when to recommend screenings to patients. Getting screened at the right age can make a big difference – it improves the chances of catching cancer early when it’s most treatable. Early detection can not only reduce the cost and burden of treatment but also improve survival rates. Sample talking points Organizations like the American Cancer Society use NHIS data to update the guidelines that doctors use to decide when to recommend",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_3",
+      "title": "NHIS impact: anxiety screening recommendations",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "relief from symptoms. Original Research that used data from the 2019 NHIS was used to inform USPSTF’s 2023 Grade B recommendation to screen for anxiety disorders in adults under age 65, including pregnant and postpartum patients, in primary care settings. This recommendation could lead to more people getting screened for anxiety disorders, which means that more people with those disorders could be diagnosed and get help sooner. This Grade B recommendation also means that insurance will cover the cost of these anxiety screenings. Extra info: The Affordable Care Act (ACA) requires private insurance plans to cover USPSTF Grades A and B recommended preventive services without any patient cost-sharing. However, insurance companies may not always follow the law, so that aspect of the benefitwas dropped from the talking points. Sample talking point Data from NHIS informed a new recommendation that doctors screen all adults under age 65 for anxiety. This could help more people with anxiety get treatment and relief sooner. Asthma Education and Services Program FR Training Version Researchers using NHIS data found that asthma can make life tough for both kids and adults – whether it’s going to school, going to work, or just handling daily activities. These findings were used to explain why it was important to create a program to help people with asthma. That’s how the National Asthma Control Program or NACP was created. The NACP helps people create plans to manage their asthma and teaches them the skills they need to stay safe. It also trains doctors to provide better asthma care and educates teachers and daycare staff on how to support kids with asthma. Asthma plan examples For",
+      "excerpt": "relief from symptoms. Original Research that used data from the 2019 NHIS was used to inform USPSTF’s 2023 Grade B recommendation to screen for anxiety disorders in adults under age 65, including pregnant and postpartum patients, in primary care settings. This recommendation could lead to more people getting screened for anxiety disorders, which means that more people with those disorders could be diagnosed and get help sooner. This Grade B recommendation also means that insurance will cover the cost of these anxie",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_4",
+      "title": "NHIS impact: asthma education and services",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "example, in Utah, teachers learned what to do if a child has an asthma attack in class. In Alabama and other states, schools used NACP materials to work with bus drivers to reduce idling or running the engine when not moving which means cleaner air – not just for kids with asthma, but for everyone. Thanks to these efforts, millions of Americans have better control over their asthma. And to keep improving, the NACP continues using NHIS data to see what’s working and what still needs attention. Original Using NHIS data, researchers found asthma can make it tough for both kids and adults to go to school or work and do everyday things. Some people with asthma don't have a plan to control it or know what to do in an emergency. This research informed the creation of the National Asthma Control Program (NACP). They still use info from the survey to check how well the program is doing. The NACP helps in different ways. They teach doctors to give better care to people with asthma and show teachers how to help kids with asthma and keep them safe. For example, in Utah, they taught teachers what to do when a child has an asthma attack. Also, they work with states to make rules to reduce air pollution, which can make asthma worse. In Alabama and other states, they helped schools stop buses from idling, making the air cleaner and safer for kids with asthma – and for everyone else. Overall, these efforts have helped millions of Americans manage their asthma better. Sample talking points NHIS asthma data have been used to show the need for programs that help millions of people with asthma avoid asthma triggers and prevent asthma attacks. Research using NHIS data found that many kids",
+      "excerpt": "example, in Utah, teachers learned what to do if a child has an asthma attack in class. In Alabama and other states, schools used NACP materials to work with bus drivers to reduce idling or running the engine when not moving which means cleaner air – not just for kids with asthma, but for everyone. Thanks to these efforts, millions of Americans have better control over their asthma. And to keep improving, the NACP continues using NHIS data to see what’s working and what still needs attention. Original Using NHIS da",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_5",
+      "title": "NHIS impact: asthma education and services",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "miss school due to asthma. These findings were used to bring attention to the problem. Now there are community programs that prepare teachers to help students who are having asthma attacks. Diabetes Education and Services Program FR Training Version The National Diabetes Education Program (NDEP), one of the nation’s largest diabetes education programs, used NHIS diabetes data to decide what messages and activities would do the most good, and developed materials accordingly. States, community organizations, faith leaders, health educators, doctors, and nurses all use these materials. The program has made a real difference, helping people with prediabetes or diabetes – and their families – to prevent and manage the condition. The program also helped doctors take a more patient-centered approach to care, which keeps people healthier. Diabetes awareness and prevention Local organizations have used these resources to raise awareness about prediabetes and help prevent diabetes and its complications in their communities. When people with prediabetes take steps to prevent or delay diabetes, they stay healthier – and they can save thousands of dollars a year on medical costs. Also, preventing diabetes complications doesn’t just save money, improve quality of life, and reduce hospital visits; it helps people avoid losing limbs and can save lives. Original National Diabetes Education Program (NDEP) officials examined national diabetes outcome trends using NHIS data to determine what messages and activities NDEP should emphasize. NDEP was the nation's largest and leading diabetes education program from 1997 to 2019, garnering over 7 billion impressions of its educational messages",
+      "excerpt": "miss school due to asthma. These findings were used to bring attention to the problem. Now there are community programs that prepare teachers to help students who are having asthma attacks. Diabetes Education and Services Program FR Training Version The National Diabetes Education Program (NDEP), one of the nation’s largest diabetes education programs, used NHIS diabetes data to decide what messages and activities would do the most good, and developed materials accordingly. States, community organizations, faith le",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_6",
+      "title": "NHIS impact: diabetes education and services",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "and contributing to significant changes in knowledge and awareness of diabetes and prediabetes among U.S. adults during its implementation. Although the program has formally concluded, most of the NDEP materials that were developed by CDC are still being updated and are available (under different branding) on the CDC website. They are still disseminated to, and used by, diabetes educators, community health workers, faith leaders, health educators, and clinicians. Sample talking points NHIS data were used to inform one of the nation’s largest diabetes education programs, which helped improve Americans’ understanding and awareness of pre-diabetes and diabetes. Program planners use NHIS data to design educational programs and materials that help people prevent diabetes. These programs and materials also help people manage diabetes if they get it, and help doctors provide better care for people with diabetes. Insulin cost reduction FR Training Version Groups like the American Diabetes Association have used NHIS data for years to show how the high price of insulin affects people with diabetes. Recently, other advocates used NHIS data to bring more attention to the issue. The data showed that many Americans with diabetes simply can’t afford insulin, so they ration it or skip doses. Taking less insulin than needed can lead to diabetes complications and even death. In 2022, a new federal policy – informed in part by NHIS data – capped insulin costs at $35 a month for Medicare recipients. Lower prices for insulin save money and lives Not long after, the three biggest insulin makers in the U.S. lowered their prices for everyone, no matter their insurance status. This is a big",
+      "excerpt": "and contributing to significant changes in knowledge and awareness of diabetes and prediabetes among U.S. adults during its implementation. Although the program has formally concluded, most of the NDEP materials that were developed by CDC are still being updated and are available (under different branding) on the CDC website. They are still disseminated to, and used by, diabetes educators, community health workers, faith leaders, health educators, and clinicians. Sample talking points NHIS data were used to inform ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_7",
+      "title": "NHIS impact: insulin cost reduction",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "deal. It means millions of Americans with diabetes will save money and be less likely to go without the insulin they need. And when people with diabetes can take their insulin as prescribed, they’re more likely to stay healthy, avoid hospital visits, and most importantly, stay alive. Original Groups including the American Diabetes Association have long used NHIS research results on cost-related medication adherence among people with diabetesm and specifically insulin affordability in America, to bring attention to the consequences of the high cost of insulin. In recent years, starting in 2018 and through 2022, other advocates also used these NHIS research results to show the prevalence of diabetes and that many Americans with diabetes can’t afford insulin, so they ration it or skip doses. These advocates, and both presidential administrations between 2018 and 2022, called on drug manufacturers to lower the cost of their insulin. Not long after this large advocacy effort, in 2022, a new federal policy – informed in part by NHIS data – capped insulin costs at $35 a month for Medicare recipients. Shortly after that was passed, the three largest producers of insulin in the U.S. capped the out-of-pocket cost of insulin at $35 for people with and without private insurance. This has saved and will save millions of Americans with diabetes money on insulin, making it more affordable—and in some cases, possible—for them to comply with their doctor’s instructions and take care of their health. Sample talking points Thanks in part to awareness raised by users of NHIS data, people with diabetes don’t have to pay as much out-of-pocket to get insulin. NHIS data were used to show that",
+      "excerpt": "deal. It means millions of Americans with diabetes will save money and be less likely to go without the insulin they need. And when people with diabetes can take their insulin as prescribed, they’re more likely to stay healthy, avoid hospital visits, and most importantly, stay alive. Original Groups including the American Diabetes Association have long used NHIS research results on cost-related medication adherence among people with diabetesm and specifically insulin affordability in America, to bring attention to ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_8",
+      "title": "NHIS impact: insulin cost reduction",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "some people skip insulin doses or take less than they need because it cost so much. Now, insulin costs less, so the people who need it will be less likely to go without it. Many people worry about whether they can buy insulin each month. Sometimes people skip doses or take less than they need because of high prices. Research using NHIS data were used to bring attention to this problem. Now, the country's largest producers of insulin have lowered the cost so that people who need it will be more likely to get it. Over-the-counter sales of hearing aids NHIS data were used to show that many adults who could benefit from hearing aids weren’t using them. That insight led to a new law and associated new FDA rule that changed the game for people who need hearing aids. Now, people with mild to moderate hearing loss can buy hearing aids over the counter. That means they can get them directly from a store, with no need to see a licensed hearing professional first. Plus, more companies can now make them if they meet quality standards and design the hearing aid to be discreet. The result? High quality hearing aids are more affordable, less noticeable, and much easier to get. This change is helping millions of Americans hear better and enjoy a higher quality of life. Sample talking points High quality hearing aids are now available over the counter, for less money, so people can buy them in stores or online without a prescription or doctor visit. NHIS data informed this change. NHIS data were used to show that many people who need hearing aids don’t use them. Now, high quality hearing aids cost less and are easier to buy. People don't need a prescription and can buy them at",
+      "excerpt": "some people skip insulin doses or take less than they need because it cost so much. Now, insulin costs less, so the people who need it will be less likely to go without it. Many people worry about whether they can buy insulin each month. Sometimes people skip doses or take less than they need because of high prices. Research using NHIS data were used to bring attention to this problem. Now, the country's largest producers of insulin have lowered the cost so that people who need it will be more likely to get it. Ove",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_9",
+      "title": "NHIS impact summaries and talking points",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "pharmacies, stores, and online. Tobacco-related impacts not shared (yet?) with the NHIS FRs Tobacco cessation intervention recommendations NHIS research results informed the 2015 and 2021 U.S. Preventative Services Task Force’s (USPSTF) 2021 Grade A recommendations on tobacco cessation. The USPSTF recommends that clinicians ask adults if they use tobacco and provide evidence-based behavioral help (like certain kinds of counseling) to all those who do. They also recommended that tobacco users who weren’t pregnant be offered pharmacotherapy to help them quit. Private health insurance, Medicare, and Medicaid must pay for services recommended by USPSTF at the A or B level – so that includes quitting help. When insurance covers the costs of quitting help, it makes it easier for smokers to get the help they want. Pregnant women who quit smoking during pregnancy are more likely to deliver healthy babies. Sample Talking Points Data from this survey has informed clinical guidelines for smoking cessation, which supports smokers who are trying to quit in getting the help they’re looking for. NHIS data informed clinical guidelines for smoking cessation programs, which give adults who want to quit emotional and medical support to reach their goals. Legal minimum age for the sale of tobacco raised from 18 to 21 Researchers used 1965-2012 NHIS data on smoking prevalence and smoking cessation in models that predicted how changing the legal minimum age for the sale of tobacco would affect smoking rates and health over the next 80 years. They found that raising the minimum age to 21 could greatly reduce the number of teenagers and young adults who start smoking, which would reduce the",
+      "excerpt": "pharmacies, stores, and online. Tobacco-related impacts not shared (yet?) with the NHIS FRs Tobacco cessation intervention recommendations NHIS research results informed the 2015 and 2021 U.S. Preventative Services Task Force’s (USPSTF) 2021 Grade A recommendations on tobacco cessation. The USPSTF recommends that clinicians ask adults if they use tobacco and provide evidence-based behavioral help (like certain kinds of counseling) to all those who do. They also recommended that tobacco users who weren’t pregnant be",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_10",
+      "title": "NHIS impact summaries and talking points",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "number of young parents who smoke. That would lead to improvements in young parents’ health and the health of their kids. They also found it would reduce the overall number of smokers, smoking-related illnesses, and deaths caused by smoking. Advocacy groups, including the American Lung Association, used the results of this research to raise awareness of the importance of passing a law to raise the federal minimum age for the sale of tobacco products from 18 to 21 years. In 2019 Congress passed such a law, known as “Tobacco 21” or “T21”, which makes it illegal for a retailer to sell any tobacco product—including cigarettes, cigars, and e-cigarettes—to anyone under 21. Sample talking points Research that used data from NHIS showed that raising the federal minimum age for the sale of tobacco products to 21 could prevent youth from ever starting to smoke, and ultimately save lives. The age was raised, so it’s harder for teens and young adults to start smoking. NHIS data informed the raising of the age for the legal sale of tobacco from 18 to 21, reducing the number of young occasional users who become addicted daily users, and saving the country millions of dollars in smoking-related costs. 9. Preventing sales of tobacco to kids NHIS data was used in research that looked at how many adults smoke and the cost of smoking to the United States, including medical bills and lost productivity. That research informed the 2009 Family Smoking Prevention and Tobacco Control Act. (Specifically, it was mentioned in the “background and need for legislation” section of reports to Congress that accompanied the Act). This law gave FDA the power to regulate (create and enforce rules about)",
+      "excerpt": "number of young parents who smoke. That would lead to improvements in young parents’ health and the health of their kids. They also found it would reduce the overall number of smokers, smoking-related illnesses, and deaths caused by smoking. Advocacy groups, including the American Lung Association, used the results of this research to raise awareness of the importance of passing a law to raise the federal minimum age for the sale of tobacco products from 18 to 21 years. In 2019 Congress passed such a law, known as ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_11",
+      "title": "NHIS impact summaries and talking points",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "how tobacco products like cigarettes, cigars, e-cigarettes, and smokeless tobacco are made, sold, and advertised. The FDA had tried to do this in 1996, but in 2000 the Supreme Court ruled the FDA did not have the authority. The 2009 law gave them the authority, and directed the FDA to reissue a modified version of the 1996 rule that the Supreme Court had struck down. The 2010 version of the FDA rule did many things, including.. Made it illegal to manufacture fruit or candy flavored cigarettes (the kind most likely to appeal to kids) Prohibited cigarette and smokeless tobacco brand sponsorship of sports, music, or other events Prohibited giving away free samples of cigarettes and smokeless tobacco in places kids can access Required face-to-face cigarette sales and age verification, and banned cigarette vending machines in places kids can access Created a partnership program in which the FDA helps States enforce existing laws that prohibit stores from selling tobacco to kids. Created effective youth tobacco prevention campaigns, such as “The Real Cost”, which is currently focused on youth e-cigarette prevention and adult tobacco use cessation. These changes have helped reduce smoking among teenagers and adults and saved billions of dollars in smoking-related costs. Sample talking point Research using NHIS data has been used to inform policies that protect youth from targeted tobacco marketing. 10. Effective tobacco prevention and cessation campaigns NHIS data was used in research that looked at how many adults smoke and the cost of smoking to the United States, including medical bills and lost productivity. That research informed the 2009 Family Smoking Prevention and",
+      "excerpt": "how tobacco products like cigarettes, cigars, e-cigarettes, and smokeless tobacco are made, sold, and advertised. The FDA had tried to do this in 1996, but in 2000 the Supreme Court ruled the FDA did not have the authority. The 2009 law gave them the authority, and directed the FDA to reissue a modified version of the 1996 rule that the Supreme Court had struck down. The 2010 version of the FDA rule did many things, including.. Made it illegal to manufacture fruit or candy flavored cigarettes (the kind most likely ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_12",
+      "title": "NHIS impact: asthma education and services",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "Tobacco Control Act, which led to the creation of effective FDA youth tobacco prevention campaigns, such as “The Real Cost”, which is currently focused on youth e-cigarette prevention, and adult tobacco use cessation programs. These changes have helped reduce smoking among teenagers and adults and saved billions of dollars in smoking-related costs. Sample talking point Have you heard of the Real Cost? It is a national education campaign that has prevented thousands of kids from smoking and saved Americans billions of dollars from smoking-related costs. Research that used NHIS data was used to explain why it was important to start this campaign. 11. Smoke-free public housing rule Since 2016, residents, visitors, and staff in public housing have been protected from the dangerous health effects of secondhand tobacco smoke. This change was informed by NHIS data on child and adult exposure to secondhand smoke and the prevalence of asthma among children Concerns: Could offend smokers. Could anger proponents of minimal government regulation/ those who believe people shouldn’t be told what to do in their own homes. People living in public housing resent being told what they can’t do in their own homes. People in public housing often don’t follow the rules. This rule is not enforced. Other impacts not shared with the NHIS FRs These were not shared with the NHIS FRs because the FR Panel advised us to avoid benefits that not everyone gets. One reason why only some people would get them is if the “costly government programs” have age- or income- or state-based eligibility requirements. Another reason why not everyone would get them is that they rely on health insurance companies",
+      "excerpt": "Tobacco Control Act, which led to the creation of effective FDA youth tobacco prevention campaigns, such as “The Real Cost”, which is currently focused on youth e-cigarette prevention, and adult tobacco use cessation programs. These changes have helped reduce smoking among teenagers and adults and saved billions of dollars in smoking-related costs. Sample talking point Have you heard of the Real Cost? It is a national education campaign that has prevented thousands of kids from smoking and saved Americans billions ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_13",
+      "title": "NHIS impact: cancer screening guidelines",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "following the law. 12. Lower Medicare drug costs NHIS data on cost-related prescription medication nonadherence were used to bring attention to the problem. This increased attention contributed to the passage of a policy that gave Medicare the power to negotiate drug prices with drug manufacturers for the first time, so the cost for those medications for people covered by Medicare will go down. Reducing the cost of prescription medication has the potential to improve adherence, which is associated with a reduction in the likelihood of more serious illness, additional treatment, and reduced mortality. As a result of the probable reduction in complications, this change also has the potential to save the nation money on health care costs. 13. Mental health care insurance coverage parity extended to Medicaid and CHIP via 2016 CMS rule 14. Health insurance premiums/deductibles/copays for HealthCare.gov and state-based Marketplace plans stay low because b/c 2022 Inflation Reduction Act extended the broadened eligibility for this “extra financial help” put in place by 2021 American Rescue Plan 15. Breast and cervical cancer screening and treatment program for under/uninsured women On hold due to legal challenges to federal rule The last two impacts are “on hold” in the sense that they have not yet been fully implemented, due to legal challenges to the rule that would bring about the benefit. Also, the NHIS FR review panel advised us that not everyone agrees that these are benefits. 16. Increased protections against discrimination in health insurance and health care 17. Requirements for warning labels for cigarette packages and ads Would bring our requirements into closer",
+      "excerpt": "following the law. 12. Lower Medicare drug costs NHIS data on cost-related prescription medication nonadherence were used to bring attention to the problem. This increased attention contributed to the passage of a policy that gave Medicare the power to negotiate drug prices with drug manufacturers for the first time, so the cost for those medications for people covered by Medicare will go down. Reducing the cost of prescription medication has the potential to improve adherence, which is associated with a reduction ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_14",
+      "title": "NHIS impact summaries and talking points",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "alignment with those in most other developed nations, and would have a much greater chance of being understood and having an impact compared to current warning labels. The new color graphics and text statements would make it easier to understand and remember the negative health consequences of cigarette smoking, including less-known health consequences such diabetes and erectile dysfunction. These kinds of messages and graphics appear on cigarette packages in over 100 countries around the world. They would be more effective than the current Surgeon General’s warnings, last updated in 1984, which have been shown to be neither eye-catching nor memorable. 18. Other tobacco-related benefits identified since the end of the contract Research results from NHIS were used to expose and stop the promotion of tobacco company lies about the supposed harmlessness of secondhand smoke Since research using NHIS data showed the dangers of secondhand smoke, more restaurants have gone smoke-free Since research using NHIS data showed the dangers of secondhand smoke, more people, including smokers, keep their homes",
+      "excerpt": "alignment with those in most other developed nations, and would have a much greater chance of being understood and having an impact compared to current warning labels. The new color graphics and text statements would make it easier to understand and remember the negative health consequences of cigarette smoking, including less-known health consequences such diabetes and erectile dysfunction. These kinds of messages and graphics appear on cigarette packages in over 100 countries around the world. They would be more ",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_talking_points_15",
+      "title": "NHIS impact summaries and talking points",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_impact_summary",
+      "text": "smoke-free",
+      "excerpt": "smoke-free",
+      "source_file": "NHIS Impact Summaries and Talking Points.docx"
+    },
+    {
+      "id": "impact_six_benefits_page_1",
+      "title": "Six real-life benefits: cancer screening recommendations (page 1)",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_job_aid",
+      "text": "NHIS DATA: SIX REAL-LIFE BENEFITS NHIS data are used to update cancer screening guidelines. These help doctors know when to recommend cancer screenings that can save lives. Thanks to these updates, people are more likely to get screened at the right age and frequency to help catch cancer early. Organizations like the American Cancer Society use NHIS data to update the guidelines that doctors use to decide when to recommend screenings that find cancer early - before it spreads, and symptoms start. NHIS data informed the update to the recommended age to start colon cancer screening: In 2018 it changed from 50 to 45. Too many of us know people who have been affected by cancer. Data from this survey are used to update cancer screening guidelines that can save lives. Cancer Screenings Recommendations These talking points are examples of how NHIS data have been used to benefit people in the United States. If the respondent does not engage well with a talking point, redirect the conversation to other uses of NHIS data. Remember, feel free to put these talking points in your own words. 1",
+      "excerpt": "NHIS DATA: SIX REAL-LIFE BENEFITS NHIS data are used to update cancer screening guidelines. These help doctors know when to recommend cancer screenings that can save lives. Thanks to these updates, people are more likely to get screened at the right age and frequency to help catch cancer early. Organizations like the American Cancer Society use NHIS data to update the guidelines that doctors use to decide when to recommend screenings that find cancer early - before it spreads, and symptoms start. NHIS data informed",
+      "source_file": "NHIS Data Six Real Life Benefits Job Aid Final 052025.pdf"
+    },
+    {
+      "id": "impact_six_benefits_page_2",
+      "title": "Six real-life benefits: anxiety, asthma, and diabetes examples (page 2)",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_job_aid",
+      "text": "NHIS data were used to justify the creation and continuation of programs that help many of the 24 million Americans who suffer from asthma get control of their disease and breathe easier. NHIS asthma data have been used to show the need for programs that help millions of people with asthma avoid asthma triggers and prevent asthma attacks. Research using NHIS data found that many kids miss school due to asthma. These findings were used to bring attention to the problem. Now there are community programs that prepare teachers to help students who are having asthma attacks. Asthma Education and Services Program NHIS data were used to inform one of the nation’s largest diabetes education programs, which helped improve Americans’ understanding and awareness of (pre)diabetes. Program planners use NHIS data to design educational programs and materials that help people prevent diabetes and manage it if they get it, and help doctors provide better care for people with diabetes. Diabetes Education and Services Program 2 Data from NHIS informed a new recommendation that doctors screen all adults under age 65 for anxiety. This could help more people with anxiety get treatment and relief sooner. Anxiety Disorder Screening Recommendations",
+      "excerpt": "NHIS data were used to justify the creation and continuation of programs that help many of the 24 million Americans who suffer from asthma get control of their disease and breathe easier. NHIS asthma data have been used to show the need for programs that help millions of people with asthma avoid asthma triggers and prevent asthma attacks. Research using NHIS data found that many kids miss school due to asthma. These findings were used to bring attention to the problem. Now there are community programs that prepare ",
+      "source_file": "NHIS Data Six Real Life Benefits Job Aid Final 052025.pdf"
+    },
+    {
+      "id": "impact_six_benefits_page_3",
+      "title": "Six real-life benefits: anxiety, asthma, and diabetes examples (page 3)",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_job_aid",
+      "text": "High quality hearing aids are now available over the counter, for less money, so people can buy them in stores or online without a prescription or doctor visit. NHIS data informed this change. NHIS data were used to show that many people who need hearing aids don’t use them. Now, high quality hearing aids cost less and are easier to buy. People don't need a prescription and can buy them at pharmacies, stores, and online. Over the Counter Hearing Aids 3 Thanks in part to awareness raised by users of NHIS data, people with diabetes don’t have to pay as much out-of- pocket to get insulin. NHIS data were used to show that some people skip insulin doses or take less than they need because it cost so much. Now, insulin costs less, so the people who need it will be less likely to go without it. Many people worry about whether they can buy insulin each month. Sometimes people skip doses or take less than they need because of high prices. Research using NHIS data were used to bring attention to this problem. Now, the country's largest producers of insulin have lowered the cost so that people who need it will be more likely to get it. Insulin Cost Reduction",
+      "excerpt": "High quality hearing aids are now available over the counter, for less money, so people can buy them in stores or online without a prescription or doctor visit. NHIS data informed this change. NHIS data were used to show that many people who need hearing aids don’t use them. Now, high quality hearing aids cost less and are easier to buy. People don't need a prescription and can buy them at pharmacies, stores, and online. Over the Counter Hearing Aids 3 Thanks in part to awareness raised by users of NHIS data, peopl",
+      "source_file": "NHIS Data Six Real Life Benefits Job Aid Final 052025.pdf"
+    },
+    {
+      "id": "impact_six_benefits_page_4",
+      "title": "Six real-life benefits: cancer screening recommendations (page 4)",
+      "url": "",
+      "source_type": "uploaded_participation_resource",
+      "source_category": "participant_resource_job_aid",
+      "text": "The talking points are a few examples of how NHIS data have been used, or are currently being used to benefit people in the U.S. Points to Consider 4 When using the talking points with potential respondents, consider that... Researchers, community organizations, and groups like the American Diabetes Association and American Cancer Society use NHIS datasets and statistics produced by NCHS to highlight problems and design solutions. NCHS and the NHIS never make policy recommendations and do not engage in advocacy. Since content on the NHIS rotates on and off the survey every year, topics covered in the talking points may not be asked in the NHIS in any given year. Some talking points may not be relevant to some respondents. Use what you observe about the respondent and your judgment. For example, colorectal cancer screening may not be of interest to young adults and cervical cancer screening may not be of interest to men. If the respondent has a negative reaction to one of these talking points, redirect the conversation back to other uses of NHIS data. Respondents who appreciate any of the benefits mentioned in the talking points, have an opportunity to give back by participating in the NHIS. Respondents who do not appreciate the benefits have an opportunity to voice their concerns and perspectives. By participating in the survey, respondents are also helping to ensure the availability of accurate data to power future benefits. Remember, we encourage you to put the talking points in your own words.",
+      "excerpt": "The talking points are a few examples of how NHIS data have been used, or are currently being used to benefit people in the U.S. Points to Consider 4 When using the talking points with potential respondents, consider that... Researchers, community organizations, and groups like the American Diabetes Association and American Cancer Society use NHIS datasets and statistics produced by NCHS to highlight problems and design solutions. NCHS and the NHIS never make policy recommendations and do not engage in advocacy. Si",
+      "source_file": "NHIS Data Six Real Life Benefits Job Aid Final 052025.pdf"
+    },
+    {
+      "id": "participant_link_1",
+      "title": "NHIS Participants",
+      "url": "https://www.cdc.gov/nchs/nhis-participants/index.html",
+      "source_type": "cdc_nhis_participant_webpage",
+      "source_category": "official_participant_page",
+      "text": "Official CDC/NCHS landing page for people selected to participate in NHIS. Use for participant questions about the survey, why participation matters, privacy, what to expect, and legitimacy.",
+      "excerpt": "Official CDC/NCHS landing page for people selected to participate in NHIS. Use for participant questions about the survey, why participation matters, privacy, what to expect, and legitimacy.",
+      "source_file": "links.txt"
+    },
+    {
+      "id": "participant_link_2",
+      "title": "About NHIS for participants",
+      "url": "https://www.cdc.gov/nchs/nhis-participants/about/index.html",
+      "source_type": "cdc_nhis_participant_webpage",
+      "source_category": "official_participant_page",
+      "text": "Official CDC/NCHS page explaining NHIS for participants, including what the survey is and why the selected household matters.",
+      "excerpt": "Official CDC/NCHS page explaining NHIS for participants, including what the survey is and why the selected household matters.",
+      "source_file": "links.txt"
+    },
+    {
+      "id": "participant_link_3",
+      "title": "NHIS participant privacy and confidentiality",
+      "url": "https://www.cdc.gov/nchs/nhis-participants/about/privacy.html",
+      "source_type": "cdc_nhis_participant_webpage",
+      "source_category": "official_participant_page",
+      "text": "Official CDC/NCHS participant privacy page. Use for questions about confidentiality, data protection, privacy, and how participant information is protected.",
+      "excerpt": "Official CDC/NCHS participant privacy page. Use for questions about confidentiality, data protection, privacy, and how participant information is protected.",
+      "source_file": "links.txt"
+    },
+    {
+      "id": "participant_link_4",
+      "title": "Why participate in NHIS",
+      "url": "https://www.cdc.gov/nchs/nhis-participants/why-participate/index.html",
+      "source_type": "cdc_nhis_participant_webpage",
+      "source_category": "official_participant_page",
+      "text": "Official CDC/NCHS page explaining why selected people should participate in NHIS and how participation helps provide accurate information about the nation’s health.",
+      "excerpt": "Official CDC/NCHS page explaining why selected people should participate in NHIS and how participation helps provide accurate information about the nation’s health.",
+      "source_file": "links.txt"
+    },
+    {
+      "id": "participant_link_5",
+      "title": "What to expect as an NHIS participant",
+      "url": "https://www.cdc.gov/nchs/nhis-participants/what-to-expect/index.html",
+      "source_type": "cdc_nhis_participant_webpage",
+      "source_category": "official_participant_page",
+      "text": "Official CDC/NCHS page describing what participants can expect during the NHIS process and interview.",
+      "excerpt": "Official CDC/NCHS page describing what participants can expect during the NHIS process and interview.",
+      "source_file": "links.txt"
+    }
+  ]
+}

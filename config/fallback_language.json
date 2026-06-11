@@ -1,0 +1,5 @@
+{
+  "default": "This estimate is not available in the current DHIS NHIS Adult/Child Summary Health Statistics file. To produce this estimate, use the relevant year's NHIS public use file and documentation from the official NHIS Questionnaires, Datasets, and Documentation page (https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.html).",
+  "documentation_index": "https://www.cdc.gov/nchs/nhis/documentation/index.html",
+  "year_url_template": "https://www.cdc.gov/nchs/nhis/documentation/{year}-nhis.html"
+}

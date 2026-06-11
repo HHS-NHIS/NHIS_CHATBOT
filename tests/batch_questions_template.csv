@@ -1,0 +1,6 @@
+question,expected_or_notes
+What percent of adults had current asthma in the last 2 years?,should return only latest 2 available years
+Current asthma among gay adult males last 2 years,should recognize sexual orientation and not only Male/Female; should explain no sexual orientation x sex crosstab if absent
+Show current asthma among adults by sex in 2024,baseline grouped estimate
+What percent of children had ADHD in 2024?,child topic test
+What percent of adults had current asthma?,no year means all years

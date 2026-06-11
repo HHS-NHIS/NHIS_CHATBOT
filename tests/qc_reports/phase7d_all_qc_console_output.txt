@@ -1,0 +1,16 @@
+Automated QC summary after Phase 7D patch:
+- Existing estimate QC: passed (14 / 14)
+- Phase 3 API/FAQ QC: passed (7 / 7)
+- Phase 4A widget/FAQ QC: passed (8 / 8)
+- Phase 5 feedback/API QC: passed (10 / 10)
+- Phase 6 OpenAI layer QC: passed (7 / 7)
+- Phase 6C teen/adolescent routing QC: passed (6 / 6)
+- Phase 7 interactive follow-up QC: passed (13 / 13)
+- Phase 7D participant-resource/follow-up UI QC: passed (9 / 9)
+
+Manual browser checks still recommended:
+- Confirm startup message says Phase 7D.
+- Hard refresh browser with Ctrl+F5.
+- Confirm follow-up turn history displays.
+- Confirm conversation_id pill remains across follow-up questions.
+- Confirm Clear / reset conversation resets the context.

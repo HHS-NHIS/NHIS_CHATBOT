@@ -1,0 +1,40 @@
+population,grouping_label,n_subgroups,subgroups
+adult,Age groups with 65+,4,18-34 years | 35-49 years | 50-64 years | 65 years and over
+adult,Age groups with 75+,4,18-44 years | 45-64 years | 65-74 years | 75 years and over
+adult,Difficulty status,2,With functioning difficulty | Without functioning difficulty
+adult,Disability status,2,With disability | Without disability
+adult,Education,4,College degree or higher | High school diploma or GED | Less than high school diploma | Some college
+adult,Employment status,9,Employed | Full-Time | Not Employed | Not currently employed and has never worked | Not currently employed but has worked previously | Not employed | Part-Time | Working Full-Time | Working Part-Time
+adult,Family income,2,200% and greater FPL | Less than 100% FPL
+adult,Health insurance coverage: 65 and over,6,Medicare Advantage | Medicare and Medicaid | Medicare only excluding Medicare Advantage | Other government coverage | Private | Uninsured
+adult,Health insurance coverage: Under 65,4,Medicaid or other state programs | Other government coverage | Private | Uninsured
+adult,Hispanic or Latino origin and race,6,"Black only, non-Hispanic | Hispanic | Mexican or Mexican American | Non-Hispanic | Other races, non-Hispanic | White only, non-Hispanic"
+adult,Marital status,5,Divorced or separated | Living with a partner | Married | Never married | Widowed
+adult,Metropolitan statistical area status,3,Large MSA | Not in MSA | Small MSA
+adult,Nativity,2,Foreign-born | U.S.-born
+adult,Poverty status,3,100% to less than 200% FPL | 200% and greater FPL | Less than 100% FPL
+adult,Race,7,American Indian or Alaska Native and White | American Indian or Alaska Native only | Asian only | Black and White | Black only | Native Hawaiian or Other Pacific Islander only | White only
+adult,Region,4,Midwest | Northeast | South | West
+adult,Sex,2,Female | Male
+adult,Sexual orientation,3,Bisexual | Gay or Lesbian | Straight
+adult,Social vulnerability,4,High social vulnerability | Little to no social vulnerability | Low social vulnerability | Medium social vulnerability
+adult,Total,1,Total
+adult,Urbanicity,4,Large central metro | Large fringe metro | Medium and small metro | Nonmetropolitan
+adult,Veteran Status,2,Non-veteran | Veteran
+child,Age groups,6,0-4 years | 12-17 years | 2-4 years | 3-4 years | 5-11 years | 6 months-4 years
+child,Difficulty Status,2,With functioning difficulty | Without functioning difficulty
+child,Disability Status,2,With disability | Without disability
+child,Family income,3,100% to less than 200% FPL | 200% and greater FPL | Less than 100% FPL
+child,Family structure,5,"At least one related or unrelated adult (not a parent) | Cohabiting parents | Married parents | Single parent, ever married | Single parent, never married"
+child,Health insurance coverage,4,Medicaid or other state programs | Other government coverage | Private | Uninsured
+child,Hispanic or Latino origin and race,6,"Black only, non-Hispanic | Hispanic | Mexican or Mexican American | Non-Hispanic | Other race, non-Hispanic | White only, non-Hispanic"
+child,Metro,4,Large central metro | Large fringe metro | Medium and small metro | Nonmetropolitan
+child,Parental Education,4,College degree or higher | High school diploma or GED | Less than high school diploma | Some college
+child,Place of residence,3,Large MSA | Not in MSA | Small MSA
+child,Poverty status,3,100% to less than 200% FPL | 200% and greater FPL | Less than 100% FPL
+child,Race,7,American Indian and Alaska Native and White | American Indian or Alaska Native only | Asian only | Black and White | Black only | Native Hawaiian or Other Pacific Islander only | White only
+child,Region,4,Midwest | Northeast | South | West
+child,Sex,2,Female | Male
+child,Social vulnerability index,4,High social vulnerability | Little to no social vulnerability | Low social vulnerability | Medium social vulnerability
+child,Total,1,Total
+child,Working status,4,"No working parents | Single parent, working | Two parents, both working | Two parents, one working"

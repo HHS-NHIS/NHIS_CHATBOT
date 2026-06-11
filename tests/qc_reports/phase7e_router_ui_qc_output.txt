@@ -1,0 +1,14 @@
+PASS Why should teens participate in NHIS? => faq ok
+PASS What percent of teens had asthma last year? => teen_redirect not_found
+PASS Why should kids participate in NHIS? => faq ok
+PASS Why should adults participate in NHIS? => faq ok
+PASS Is my teen's information private and secure? => faq ok
+PASS How has NHIS data helped with diabetes? => faq ok
+PASS What should I expect if selected for NHIS? => faq ok
+PASS UI constants present
+Phase 7E router/UI QC: 8 / 8 passed
+
+Additional regression checks run successfully:
+- Phase 6C teen/adolescent routing QC: 6 / 6 passed
+- Phase 7 interactive QC: 13 / 13 passed
+- Phase 7D participant-resource/follow-up UI QC: 9 / 9 passed

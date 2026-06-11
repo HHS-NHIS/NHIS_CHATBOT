@@ -1,0 +1,9 @@
+question,expected_mode,expected_status,expect_source_cards,expect_why
+What percent of adults had diabetes last year by SVI?,estimate,ok,yes,yes
+What percent of kids got a flu shot last year?,estimate,ok,yes,yes
+What percent of adults got a flu shot last year by insurance for people under 65?,estimate,ok,yes,yes
+What percent of gay men had current asthma last year?,estimate,ok,yes,yes
+What is NHIS?,faq,ok,yes,yes
+Where do I get 2024 NHIS public use files?,faq,ok,yes,yes
+What is the NHIS Data Query System?,faq,ok,yes,yes
+What percent of adults had migraines last year by SVI?,estimate_not_found,not_found,no,yes

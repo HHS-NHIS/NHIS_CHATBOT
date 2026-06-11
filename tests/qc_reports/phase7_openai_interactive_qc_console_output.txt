@@ -1,0 +1,31 @@
+Phase 6 OpenAI layer QC: 7 / 7 passed
+PASS	OpenAI disabled without key	{'requested_for_this_call': False, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}
+PASS	use_model without key returns deterministic answer	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	metadata records missing key	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	ask with use_model no key still succeeds	2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt
+PASS	ask result includes model metadata	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	model metadata indicates no model used	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	FAQ with use_model no key still returns a routed result	{'status': 'ok', 'mode': 'faq', 'answer': 'The NHIS documentation page links to year-specific questionnaires, datasets, and documentation for 2019 through 2025 and to archived resources for earlier survey years. Use the relevant year page to find public use data files, questionnaires, analytic notes
+Phase 6C teen/adolescent routing QC: 6 / 6 passed
+
+Phase 7 interactive QC: 13 / 13 passed
+PASS	initial adult diabetes estimate ok	2024 NHIS estimate — Adults Diagnosed diabetes  You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.  Total: 10.0% (95% CI: 9.6%–10.4%)  Definition/e
+PASS	conversation id returned	81fc6e16-01c0-4730-b426-fee01bf030d0
+PASS	context saved adult diabetes	{'last_question': 'What percent of adults had diabetes last year?', 'last_resolved_question': 'What percent of adults had diabetes last year?', 'last_mode': 'estimate', 'population': 'adult', 'outcome': 'Diagnosed diabetes', 'label': 'Total', 'group': None, 'years': [2024], 'updated_at': '2026-06-10T10:17:56.091004+00:00'}
+PASS	follow-up by SVI ok	What percent of adults had Diagnosed diabetes 2024 by SVI?
+PASS	follow-up context flag	{'used_followup_context': True, 'method': 'deterministic_plus_optional_model_plan', 'original_question': 'What about by SVI?', 'resolved_question': 'What percent of adults had Diagnosed diabetes 2024 by SVI?', 'previous_context': {'conversation_id': '81fc6e16-01c0-4730-b426-fee01bf030d0', 'last_question': 'What percent of adults had diabetes last year?', 'last_resolved_question': 'What percent of adults had diabetes last year?', 'last_mode': 'estimate', 'population': 'adult', 'outcome': 'Diagnos
+PASS	suggested followups returned	['Show by sex', 'Show by age', 'Show by race and ethnicity', 'Show last 2 years', 'Where do I get the data?', 'Explain the confidence interval']
+PASS	follow-up last 2 years ok	What percent of adults had Diagnosed diabetes last 2 years?
+PASS	follow-up kids routes child or safe not found	What percent of children had Diagnosed diabetes all years?
+PASS	CI explanation follow-up direct	A confidence interval gives a range around the estimate that reflects sampling uncertainty. In this prototype, estimates and confidence intervals are read directly from the current DHIS NHIS Summary H
+PASS	data documentation follow-up direct	For NHIS public use files, questionnaires, datasets, and documentation, use the official NHIS Questionnaires, Datasets, and Documentation page: https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.ht
+PASS	teen still redirects	Teen estimates are not included in this adult/child NHIS Summary Health Statistics prototype yet. For teen-specific estimates, use the NHIS Teen Summary Health Statistics tool: https://wwwn.cdc.gov/NH
+PASS	adolescent routes child not teen	2024 NHIS estimate — Children Receipt of influenza vaccination  You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.  Total: 43.7% (95% CI: 42.3%–45.
+PASS	use_model follow-up without key safely falls back	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}

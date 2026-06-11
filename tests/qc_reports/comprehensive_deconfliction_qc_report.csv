@@ -1,0 +1,85 @@
+test_type,population,question,expected_status,actual_status,expected_label,actual_label,expected_group,actual_group,pass,notes
+retrieve,adult,What percent of adults got a flu shot last year by family income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by household income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by income group?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by poverty?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by poverty status?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by FPL?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by federal poverty level?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by income-to-poverty?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by below poverty?,ok,ok,Family income,Family income,,Less than 100% FPL,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by family income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by household income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by income?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by income group?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by poverty?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by poverty status?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by FPL?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by federal poverty level?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by income-to-poverty?,ok,ok,Family income,Family income,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by below poverty?,ok,ok,Family income,Family income,,Less than 100% FPL,True,Receipt of influenza vaccination | 
+label_detect,child,kids got a flu shot last year by family structure,ok,n/a,Family structure,Family structure,,,True,"{""wants_breakdown"": true, ""requested_keys"": [""Family structure""], ""requested_values"": [], ""is_composite"": false, ""explanation"": null, ""subgroup_first"": false}"
+label_detect,child,kids got a flu shot last year by single parent families,ok,n/a,Family structure,Family structure,,Single parent,True,"{""wants_breakdown"": true, ""requested_keys"": [""Family structure""], ""requested_values"": [""Single parent""], ""is_composite"": false, ""explanation"": null, ""subgroup_first"": true}"
+label_detect,child,kids got a flu shot last year by married parents,ok,n/a,Family structure,Family structure,,Married parents,True,"{""wants_breakdown"": true, ""requested_keys"": [""Family structure""], ""requested_values"": [""Married parents""], ""is_composite"": false, ""explanation"": null, ""subgroup_first"": true}"
+label_detect,child,kids got a flu shot last year by cohabiting parents,ok,n/a,Family structure,Family structure,,Cohabiting parents,True,"{""wants_breakdown"": true, ""requested_keys"": [""Family structure""], ""requested_values"": [""Cohabiting parents""], ""is_composite"": false, ""explanation"": null, ""subgroup_first"": true}"
+retrieve,adult,What percent of adults got a flu shot last year by insurance?,ok,ok,Health insurance coverage: Under 65,Health insurance coverage: Under 65,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by insurance for people under 65?,ok,ok,Health insurance coverage: Under 65,Health insurance coverage: Under 65,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by insurance for adults 18 to 64?,ok,ok,Health insurance coverage: Under 65,Health insurance coverage: Under 65,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by insurance for seniors?,ok,ok,Health insurance coverage: 65 and over,Health insurance coverage: 65 and over,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by insurance for adults 65 and over?,ok,ok,Health insurance coverage: 65 and over,Health insurance coverage: 65 and over,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by Medicare coverage?,ok,ok,Health insurance coverage: 65 and over,Health insurance coverage: 65 and over,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by insurance?,ok,ok,Health insurance coverage,Health insurance coverage,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by private insurance?,ok,ok,Health insurance coverage,Health insurance coverage,,Private,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by uninsured?,ok,ok,Health insurance coverage,Health insurance coverage,,Uninsured,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by medicaid?,ok,ok,Health insurance coverage,Health insurance coverage,,Medicaid or other state programs,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by race?,ok,ok,Race,Race,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by race?,ok,ok,Race,Race,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by race only?,ok,ok,Race,Race,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by race only?,ok,ok,Race,Race,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by race and ethnicity?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by race and ethnicity?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by hispanic origin?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,Hispanic,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by hispanic origin?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,Hispanic,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by ethnicity?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by ethnicity?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by latino?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,Hispanic,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by latino?,ok,ok,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,Hispanic,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by MSA?,ok,ok,Metropolitan statistical area status,Metropolitan statistical area status,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by large MSA?,ok,ok,Metropolitan statistical area status,Metropolitan statistical area status,,Large MSA,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by urbanicity?,ok,ok,Urbanicity,Urbanicity,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by nonmetropolitan?,ok,ok,Urbanicity,Urbanicity,,Nonmetropolitan,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by large central metro?,ok,ok,Urbanicity,Urbanicity,,Large central metro,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by MSA?,ok,ok,Place of residence,Place of residence,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by large MSA?,ok,ok,Place of residence,Place of residence,,Large MSA,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by place of residence?,ok,ok,Place of residence,Place of residence,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by urbanicity?,ok,ok,Metro,Metro,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by nonmetropolitan?,ok,ok,Metro,Metro,,Nonmetropolitan,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by large central metro?,ok,ok,Metro,Metro,,Large central metro,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by disability?,ok,ok,Disability status,Disability status,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by difficulty?,ok,ok,Difficulty status,Difficulty status,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by functional difficulty?,ok,ok,Difficulty status,Difficulty status,,With functioning difficulty,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by functioning difficulty?,ok,ok,Difficulty status,Difficulty status,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by disability?,ok,ok,Disability Status,Disability Status,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by difficulty?,ok,ok,Difficulty Status,Difficulty Status,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by functional difficulty?,ok,ok,Difficulty Status,Difficulty Status,,With functioning difficulty,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by functioning difficulty?,ok,ok,Difficulty Status,Difficulty Status,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults had current asthma last year by sex?,ok,ok,Sex,Sex,,,True,Current asthma | 
+retrieve,adult,What percent of adults had current asthma last year by gender?,ok,ok,Sex,Sex,,,True,Current asthma | 
+retrieve,adult,What percent of adults had current asthma last year by men?,ok,ok,Sex,Sex,,Male,True,Current asthma | 
+retrieve,adult,What percent of adults had current asthma last year by gay adults?,ok,ok,Sexual orientation,Sexual orientation,,Gay or Lesbian,True,Current asthma | 
+retrieve,adult,What percent of adults had current asthma last year by sexual orientation?,ok,ok,Sexual orientation,Sexual orientation,,,True,Current asthma | 
+retrieve,adult,What percent of adults got a flu shot last year by education?,ok,ok,Education,Education,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by education?,ok,ok,Parental Education,Parental Education,,,True,Receipt of influenza vaccination | 
+retrieve,child,How many kids missed school last year?,ok,ok,Total,Total,,,True,Missing 11 or more school days due to illness or injury | 
+retrieve,child,How many kids got special education services last year?,ok,ok,Total,Total,,,True,Receiving special education or early intervention services | 
+retrieve,adult,What percent of adults got a flu shot last year by age?,ok,ok,Age groups with 65+,Age groups with 65+,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by 75 and older age groups?,ok,ok,Age groups with 75+,Age groups with 75+,,75 years and over,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by 65 and older age groups?,ok,ok,Age groups with 65+,Age groups with 65+,,65 years and over,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by age?,ok,ok,Age groups,Age groups,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults had diabetes last year by SVI?,ok,ok,Social vulnerability,Social vulnerability,,,True,Diagnosed diabetes | 
+retrieve,child,What percent of kids got a flu shot last year by SVI?,ok,ok,Social vulnerability index,Social vulnerability index,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by employment?,ok,ok,Employment status,Employment status,,,True,Receipt of influenza vaccination | 
+retrieve,child,What percent of kids got a flu shot last year by parent working status?,ok,ok,Working status,Working status,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by nativity?,ok,ok,Nativity,Nativity,,,True,Receipt of influenza vaccination | 
+retrieve,adult,What percent of adults got a flu shot last year by veteran status?,ok,ok,Veteran Status,Veteran Status,,Veteran,True,Receipt of influenza vaccination | 

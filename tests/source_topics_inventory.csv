@@ -1,0 +1,79 @@
+population,topic,tokens
+adult,Angina/angina pectoris,angina pectoris
+adult,Any skin cancer,any cancer skin
+adult,Any type of cancer,any cancer type
+adult,Arthritis diagnosis,arthritis diagnosis
+adult,Asthma episode/attack,asthma attack episode
+adult,Blood pressure check,blood check pressure
+adult,Breast cancer,breast cancer
+adult,"COPD, emphysema, chronic bronchitis",bronchitis chronic copd emphysema
+adult,Cervical cancer,cancer cervical
+adult,Coronary heart disease,coronary disease heart
+adult,Counseled by a mental health professional,counseled health mental professional
+adult,Current asthma,asthma current
+adult,Current cigarette smoking,cigarette current smoking
+adult,Current electronic cigarette use,cigarette current electronic use
+adult,Delayed getting medical care due to cost,care cost delayed due getting medical
+adult,Dental exam or cleaning,cleaning dental exam
+adult,Diagnosed diabetes,diabetes diagnosed
+adult,Diagnosed hypertension,diagnosed hypertension
+adult,Did not get needed medical care due to cost,care cost did due get medical needed not
+adult,Did not get needed mental health care due to cost,care cost did due get health mental needed not
+adult,Did not take medication as prescribed to save money,as did medication money not prescribed save take
+adult,Difficulty communicating,communicating difficulty
+adult,Difficulty hearing,difficulty hearing
+adult,Difficulty remembering or concentrating,concentrating difficulty remembering
+adult,Difficulty seeing,difficulty seeing
+adult,Difficulty status (composite),composite difficulty status
+adult,Difficulty walking or climbing steps,climbing difficulty steps walking
+adult,Difficulty with self care,care difficulty self
+adult,Disability status (composite),composite disability status
+adult,Doctor visit,doctor visit
+adult,Ever received a pneumococcal vaccination,ever pneumococcal received vaccination
+adult,Exchange-based coverage coverage at time of interview,based coverage exchange
+adult,Fair or poor health status,fair health poor status
+adult,Has a usual place of care,care place usual
+adult,Heart attack/myocardial infarction,attack heart infarction myocardial
+adult,High cholesterol,cholesterol high
+adult,Hospital emergency department visit,department emergency hospital visit
+adult,Obesity,obesity
+adult,Prescription medication use,medication prescription use
+adult,Private health insurance coverage at time of interview,coverage health insurance private
+adult,Prostate cancer,cancer prostate
+adult,Public health plan coverage at time of interview,coverage health plan public
+adult,Receipt of influenza vaccination,influenza receipt vaccination
+adult,Regularly experienced chronic pain,chronic experienced pain regularly
+adult,Regularly had feelings of depression,depression feelings regularly
+adult,"Regularly had feelings of worry, nervousness, or anxiety",anxiety feelings nervousness regularly worry
+adult,Retail health clinic visit,clinic health retail visit
+adult,"Six or more workdays missed due to illness, injury, or disability",disability due illness injury missed six workdays
+adult,Taking prescription medication for feelings of depression,depression feelings medication prescription taking
+adult,"Taking prescription medication for feelings of worry, nervousness, or anxiety",anxiety feelings medication nervousness prescription taking worry
+adult,Uninsured at time of interview,uninsured
+adult,Uninsured for at least part of the past year,least part past uninsured year
+adult,Uninsured for more than one year,one uninsured year
+adult,Urgent care center or retail health clinic visit,care center clinic health retail urgent visit
+adult,Urgent care center visit,care center urgent visit
+adult,Wellness visit,visit wellness
+child,Current asthma,asthma current
+child,"Daily feelings of worry, nervousness, or anxiety",anxiety daily feelings nervousness worry
+child,Delayed getting medical care due to cost,care cost delayed due getting medical
+child,Difficulty status (composite),composite difficulty status
+child,Disability status (composite),composite disability status
+child,Doctor visit,doctor visit
+child,Ever having a learning disability,disability ever learning
+child,Ever having asthma,asthma ever
+child,Ever having attention-deficit/hyperactivity disorder,attention deficit disorder ever hyperactivity
+child,Fair or poor health status,fair health poor status
+child,Has a usual place of care,care place usual
+child,Missing 11 or more school days due to illness or injury,11 days due illness injury missing school
+child,Prescription medication use,medication prescription use
+child,Receipt of influenza vaccination,influenza receipt vaccination
+child,Receive services for mental health problems,health mental problems receive services
+child,Receiving special education or early intervention services,early education intervention receiving services special
+child,Two or more hospital emergency department visits,department emergency hospital two visits
+child,Two or more retail health clinic visits,clinic health retail two visits
+child,Two or more urgent care center or retail health clinic visits,care center clinic health retail two urgent visits
+child,Two or more urgent care center visits,care center two urgent visits
+child,Uninsured at time of interview,uninsured
+child,Well child check-up,check child up well

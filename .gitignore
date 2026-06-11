@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+ENV/
+
+# Local/env secrets
+.env
+.env.*
+OPENAI_API_KEY.txt
+
+# Local runtime outputs
+data/feedback/*.csv
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

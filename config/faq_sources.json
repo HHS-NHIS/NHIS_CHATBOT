@@ -1,0 +1,19 @@
+{
+  "allowed_sources": [
+    "https://www.cdc.gov/nchs/nhis/index.html",
+    "https://www.cdc.gov/nchs/nhis/about/index.html",
+    "https://www.cdc.gov/nchs/nhis/about-data/index.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/index.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2019-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2020-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2021-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2022-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2023-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.html",
+    "https://www.cdc.gov/nchs/nhis/early-release/index.html",
+    "https://www.cdc.gov/nchs/nhis/products/data-query-systems.html",
+    "https://www.cdc.gov/nchs/nhis/participants/index.html",
+    "https://www.cdc.gov/nchs/nhis/methods/index.html",
+    "https://www.cdc.gov/nchs/nhis/2019_quest_redesign.html"
+  ]
+}

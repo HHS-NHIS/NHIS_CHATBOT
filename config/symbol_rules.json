@@ -1,0 +1,7 @@
+{
+  "444": {"display": "**", "footnote": "** While the estimate meets NCHS standards of reliability, its complement does not"},
+  "555": {"display": "***", "footnote": "*** Topic is limited to adults aged 18-64"},
+  "777": {"display": "NA", "footnote": "NA = rotating content, indicator not available for time period"},
+  "888": {"display": "-", "footnote": "- Quantity zero"},
+  "999": {"display": "*", "footnote": "* Estimate does not meet NCHS standards of reliability"}
+}

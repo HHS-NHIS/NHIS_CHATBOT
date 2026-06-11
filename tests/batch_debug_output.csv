@@ -1,0 +1,184 @@
+﻿input_row,question,status,answer,answer_debug_text,error,debug_reason,parsed_population,parsed_years,year_mode,year_explanation,matched_outcome,matched_grouping_label,matched_group_value,rows_returned,topic_match_method,topic_match_score,topic_match_keyword,topic_mapped_topic,requested_group_keys,requested_group_values,group_is_composite,group_explanation,raw_debug_json
+1,What percent of adults had current asthma in the last 2 years?,ok,"2023–2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2024: 8.6%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html","2023–2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2024: 8.6%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: last_n_years
+- Years returned: 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG",,,adult,2023;2024,last_n_years,"You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.",Current asthma,Total,,2,manual_synonym,1.05,current asthma,Current asthma,,,False,,"{""population"": ""adult"", ""years"": [2023, 2024], ""year_meta"": {""mode"": ""last_n_years"", ""n"": 2, ""explanation"": ""You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024."", ""available_years"": [2019, 2020, 2021, 2022, 2023, 2024]}, ""outcome"": ""Current asthma"", ""label"": ""Total"", ""group"": null, ""rows_returned"": 2, ""topic_meta"": {""score"": 1.05, ""keyword"": ""current asthma"", ""mapped_topic"": ""Current asthma"", ""method"": ""manual_synonym"", ""outcome"": ""Current asthma""}, ""group_meta"": {""wants_breakdown"": false, ""requested_keys"": [], ""requested_values"": [], ""is_composite"": false, ""explanation"": null}}"
+2,Current asthma among gay adult males last 2 years,ok,"2023–2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+2023 — Bisexual: 19.6% (95% CI: 15.7%–24.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html","2023–2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+2023 — Bisexual: 19.6% (95% CI: 15.7%–24.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sexual orientation
+- Requested group value: [none]
+- Year mode: last_n_years
+- Years returned: 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG",,,adult,2023;2024,last_n_years,"You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.",Current asthma,Sexual orientation,,1,manual_synonym,1.05,current asthma,Current asthma,sexual_orientation;sex,Gay or Lesbian;Male,True,,"{""population"": ""adult"", ""years"": [2023, 2024], ""year_meta"": {""mode"": ""last_n_years"", ""n"": 2, ""explanation"": ""You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024."", ""available_years"": [2019, 2020, 2021, 2022, 2023, 2024]}, ""outcome"": ""Current asthma"", ""label"": ""Sexual orientation"", ""group"": null, ""rows_returned"": 1, ""topic_meta"": {""score"": 1.05, ""keyword"": ""current asthma"", ""mapped_topic"": ""Current asthma"", ""method"": ""manual_synonym"", ""outcome"": ""Current asthma""}, ""group_meta"": {""wants_breakdown"": false, ""requested_keys"": [""sexual_orientation"", ""sex""], ""requested_values"": [""Gay or Lesbian"", ""Male""], ""is_composite"": true, ""explanation"": null}}"
+3,Show current asthma among adults by sex in 2024,ok,"2024 NHIS estimate — Adults
+Current asthma by Sex
+
+Female: 10.7% (95% CI: 10.2%–11.3%)
+Male: 6.4% (95% CI: 5.9%–6.9%)
+
+Highest among the returned rows: Female in 2024: 10.7%. Lowest among the returned rows: Male in 2024: 6.4%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html","2024 NHIS estimate — Adults
+Current asthma by Sex
+
+Female: 10.7% (95% CI: 10.2%–11.3%)
+Male: 6.4% (95% CI: 5.9%–6.9%)
+
+Highest among the returned rows: Female in 2024: 10.7%. Lowest among the returned rows: Male in 2024: 6.4%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sex
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG",,,adult,2024,explicit,,Current asthma,Sex,,2,manual_synonym,1.05,current asthma,Current asthma,sex,,False,,"{""population"": ""adult"", ""years"": [2024], ""year_meta"": {""mode"": ""explicit"", ""explanation"": null, ""available_years"": [2019, 2020, 2021, 2022, 2023, 2024]}, ""outcome"": ""Current asthma"", ""label"": ""Sex"", ""group"": null, ""rows_returned"": 2, ""topic_meta"": {""score"": 1.05, ""keyword"": ""current asthma"", ""mapped_topic"": ""Current asthma"", ""method"": ""manual_synonym"", ""outcome"": ""Current asthma""}, ""group_meta"": {""wants_breakdown"": true, ""requested_keys"": [""sex""], ""requested_values"": [], ""is_composite"": false, ""explanation"": null, ""subgroup_first"": false}}"
+4,What percent of children had ADHD in 2024?,ok,"2024 NHIS estimate — Children
+Ever having attention-deficit/hyperactivity disorder
+
+Total: 12.0% (95% CI: 11.1%–13.0%)
+
+Definition/excerpt from DHIS file: Based on the question ""Has a doctor or other health professional ever told you that [child's name] had attention deficit hyperactivity disorder (ADHD) or attention deficit disorder (ADD)?""
+
+Source: DHIS NHIS Child Summary Health Statistics, 2024. Socrata ID: wxz7-ekz9. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html","2024 NHIS estimate — Children
+Ever having attention-deficit/hyperactivity disorder
+
+Total: 12.0% (95% CI: 11.1%–13.0%)
+
+Definition/excerpt from DHIS file: Based on the question ""Has a doctor or other health professional ever told you that [child's name] had attention deficit hyperactivity disorder (ADHD) or attention deficit disorder (ADD)?""
+
+Source: DHIS NHIS Child Summary Health Statistics, 2024. Socrata ID: wxz7-ekz9. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: child
+- Outcome: Ever having attention-deficit/hyperactivity disorder
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, ZERO, KG_FLAG",,,child,2024,explicit,,Ever having attention-deficit/hyperactivity disorder,Total,,1,manual_synonym,1.05,adhd,Ever having attention-deficit/hyperactivity disorder,,,False,,"{""population"": ""child"", ""years"": [2024], ""year_meta"": {""mode"": ""explicit"", ""explanation"": null, ""available_years"": [2019, 2020, 2021, 2022, 2023, 2024]}, ""outcome"": ""Ever having attention-deficit/hyperactivity disorder"", ""label"": ""Total"", ""group"": null, ""rows_returned"": 1, ""topic_meta"": {""score"": 1.05, ""keyword"": ""adhd"", ""mapped_topic"": ""Ever having attention-deficit/hyperactivity disorder"", ""method"": ""manual_synonym"", ""outcome"": ""Ever having attention-deficit/hyperactivity disorder""}, ""group_meta"": {""wants_breakdown"": false, ""requested_keys"": [], ""requested_values"": [], ""is_composite"": false, ""explanation"": null}}"
+5,What percent of adults had current asthma?,ok,"2019–2024 NHIS estimate — Adults
+Current asthma
+
+No year was specified, so I returned all years available in the current DHIS file (2019–2024).
+
+2019 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2020 — Total: 8.4% (95% CI: 7.9%–8.8%)
+2021 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2022 — Total: 8.7% (95% CI: 8.3%–9.2%)
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2019: 8.0%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2019–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html","2019–2024 NHIS estimate — Adults
+Current asthma
+
+No year was specified, so I returned all years available in the current DHIS file (2019–2024).
+
+2019 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2020 — Total: 8.4% (95% CI: 7.9%–8.8%)
+2021 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2022 — Total: 8.7% (95% CI: 8.3%–9.2%)
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2019: 8.0%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2019–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: all_available
+- Years returned: 2019, 2020, 2021, 2022, 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 6
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG",,,adult,2019;2020;2021;2022;2023;2024,all_available,"No year was specified, so I returned all years available in the current DHIS file (2019–2024).",Current asthma,Total,,6,manual_synonym,1.05,current asthma,Current asthma,,,False,,"{""population"": ""adult"", ""years"": [2019, 2020, 2021, 2022, 2023, 2024], ""year_meta"": {""mode"": ""all_available"", ""explanation"": ""No year was specified, so I returned all years available in the current DHIS file (2019–2024)."", ""available_years"": [2019, 2020, 2021, 2022, 2023, 2024]}, ""outcome"": ""Current asthma"", ""label"": ""Total"", ""group"": null, ""rows_returned"": 6, ""topic_meta"": {""score"": 1.05, ""keyword"": ""current asthma"", ""mapped_topic"": ""Current asthma"", ""method"": ""manual_synonym"", ""outcome"": ""Current asthma""}, ""group_meta"": {""wants_breakdown"": false, ""requested_keys"": [], ""requested_values"": [], ""is_composite"": false, ""explanation"": null}}"

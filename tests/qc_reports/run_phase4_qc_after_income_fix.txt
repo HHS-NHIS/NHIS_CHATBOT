@@ -1,0 +1,2 @@
+Phase 4A QC complete. Passed: 8 / 8
+Report: /mnt/data/work_fix/dhis_nhis_chatbot/tests/qc_reports/phase4_widget_faq_qc_report.csv

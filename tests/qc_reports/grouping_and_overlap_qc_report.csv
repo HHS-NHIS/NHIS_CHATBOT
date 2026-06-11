@@ -1,0 +1,50 @@
+audit_type,population,query,expected_outcome,matched_outcome,expected_label,matched_label,matched_group_value,rows_available,pass,note
+grouping_category,adult,How many adults got a flu shot in 2024 by age groups including 65 plus?,Receipt of influenza vaccination,Receipt of influenza vaccination,Age groups with 65+,Age groups with 65+,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by age groups including 75 plus?,Receipt of influenza vaccination,Receipt of influenza vaccination,Age groups with 75+,Age groups with 75+,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by functioning difficulty status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Difficulty status,Difficulty status,,2,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by disability status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Disability status,Disability status,,2,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by education level?,Receipt of influenza vaccination,Receipt of influenza vaccination,Education,Education,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by employment status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Employment status,Employment status,,6,True,
+grouping_category,adult,How many adults used urgent care in 2024 by family income group?,Urgent care center visit,Urgent care center visit,Family income,Family income,,2,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by insurance coverage for people 65 and over?,Receipt of influenza vaccination,Receipt of influenza vaccination,Health insurance coverage: 65 and over,Health insurance coverage: 65 and over,,6,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by insurance coverage under 65?,Receipt of influenza vaccination,Receipt of influenza vaccination,Health insurance coverage: Under 65,Health insurance coverage: Under 65,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by race and ethnicity?,Receipt of influenza vaccination,Receipt of influenza vaccination,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,6,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by marital status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Marital status,Marital status,,5,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by MSA status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Metropolitan statistical area status,Metropolitan statistical area status,,3,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by nativity?,Receipt of influenza vaccination,Receipt of influenza vaccination,Nativity,Nativity,,2,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by poverty level?,Receipt of influenza vaccination,Receipt of influenza vaccination,Poverty status,Poverty status,,3,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by racial group?,Receipt of influenza vaccination,Receipt of influenza vaccination,Race,Race,,7,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by census region?,Receipt of influenza vaccination,Receipt of influenza vaccination,Region,Region,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by gender?,Receipt of influenza vaccination,Receipt of influenza vaccination,Sex,Sex,,2,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by sexual orientation?,Receipt of influenza vaccination,Receipt of influenza vaccination,Sexual orientation,Sexual orientation,,3,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by SVI?,Receipt of influenza vaccination,Receipt of influenza vaccination,Social vulnerability,Social vulnerability,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 overall?,Receipt of influenza vaccination,Receipt of influenza vaccination,Total,Total,,1,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by urbanicity?,Receipt of influenza vaccination,Receipt of influenza vaccination,Urbanicity,Urbanicity,,4,True,
+grouping_category,adult,How many adults got a flu shot in 2024 by veteran status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Veteran Status,Veteran Status,Veteran,2,True,
+grouping_category,child,How many kids got a flu shot in 2024 by age group?,Receipt of influenza vaccination,Receipt of influenza vaccination,Age groups,Age groups,,3,True,
+grouping_category,child,How many kids got a flu shot in 2024 by functioning difficulty status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Difficulty Status,Difficulty Status,,2,True,
+grouping_category,child,How many kids got a flu shot in 2024 by disability status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Disability Status,Disability Status,,2,True,
+grouping_category,child,How many kids got a flu shot in 2021 by family income group?,Receipt of influenza vaccination,Receipt of influenza vaccination,Family income,Family income,,3,True,
+grouping_category,child,How many kids got a flu shot in 2024 by family structure?,Receipt of influenza vaccination,Receipt of influenza vaccination,Family structure,Family structure,,5,True,
+grouping_category,child,How many kids got a flu shot in 2024 by insurance coverage?,Receipt of influenza vaccination,Receipt of influenza vaccination,Health insurance coverage,Health insurance coverage,,4,True,
+grouping_category,child,How many kids got a flu shot in 2024 by race and ethnicity?,Receipt of influenza vaccination,Receipt of influenza vaccination,Hispanic or Latino origin and race,Hispanic or Latino origin and race,,6,True,
+grouping_category,child,How many kids got a flu shot in 2024 by urbanicity?,Receipt of influenza vaccination,Receipt of influenza vaccination,Metro,Metro,,4,True,
+grouping_category,child,How many kids got a flu shot in 2024 by parents education level?,Receipt of influenza vaccination,Receipt of influenza vaccination,Parental Education,Parental Education,,4,True,
+grouping_category,child,How many kids got a flu shot in 2024 by MSA residence?,Receipt of influenza vaccination,Receipt of influenza vaccination,Place of residence,Place of residence,,3,True,
+grouping_category,child,How many kids got a flu shot in 2024 by poverty level?,Receipt of influenza vaccination,Receipt of influenza vaccination,Poverty status,Poverty status,,3,True,
+grouping_category,child,How many kids got a flu shot in 2024 by racial group?,Receipt of influenza vaccination,Receipt of influenza vaccination,Race,Race,,7,True,
+grouping_category,child,How many kids got a flu shot in 2024 by census region?,Receipt of influenza vaccination,Receipt of influenza vaccination,Region,Region,,4,True,
+grouping_category,child,How many kids got a flu shot in 2024 by gender?,Receipt of influenza vaccination,Receipt of influenza vaccination,Sex,Sex,,2,True,
+grouping_category,child,How many kids got a flu shot in 2024 by SVI?,Receipt of influenza vaccination,Receipt of influenza vaccination,Social vulnerability index,Social vulnerability index,,4,True,
+grouping_category,child,How many kids got a flu shot in 2024 overall?,Receipt of influenza vaccination,Receipt of influenza vaccination,Total,Total,,1,True,
+grouping_category,child,How many kids got a flu shot in 2024 by parent working status?,Receipt of influenza vaccination,Receipt of influenza vaccination,Working status,Working status,,4,True,
+topic_subgroup_overlap,adult,What percent of adults were uninsured last year?,Uninsured at time of interview,Uninsured at time of interview,Total,Total,,1,True,topic_not_insurance_subgroup
+topic_subgroup_overlap,child,What percent of kids were uninsured last year?,Uninsured at time of interview,Uninsured at time of interview,Total,Total,,1,True,topic_not_insurance_subgroup
+topic_subgroup_overlap,adult,What percent of adults had diabetes last year by SVI?,Diagnosed diabetes,Diagnosed diabetes,Social vulnerability,Social vulnerability,,4,True,svi_grouping_expands
+topic_subgroup_overlap,adult,What percent of gay men had current asthma last year?,Current asthma,Current asthma,Sexual orientation,Sexual orientation,Gay or Lesbian,3,True,sexual_orientation_priority_over_sex
+topic_subgroup_overlap,adult,What percent of male adults had current asthma last year?,Current asthma,Current asthma,Sex,Sex,Male,2,True,sex_subgroup
+topic_subgroup_overlap,child,How many uninsured kids got a flu shot last year?,Receipt of influenza vaccination,Receipt of influenza vaccination,Health insurance coverage,Health insurance coverage,Uninsured,4,True,insurance_subgroup_when_topic_is_flu
+topic_subgroup_overlap,adult,How many private insurance adults got a flu shot last year?,Receipt of influenza vaccination,Receipt of influenza vaccination,Health insurance coverage: Under 65,Health insurance coverage: Under 65,Private,4,True,insurance_subgroup_private
+topic_subgroup_overlap,child,How many Hispanic kids got a flu shot last year?,Receipt of influenza vaccination,Receipt of influenza vaccination,Hispanic or Latino origin and race,Hispanic or Latino origin and race,Hispanic,6,True,hispanic_subgroup
+topic_subgroup_overlap,adult,How many Black adults got a flu shot last year?,Receipt of influenza vaccination,Receipt of influenza vaccination,Race,Race,"Black only, non-Hispanic",7,True,race_subgroup
+topic_subgroup_overlap,adult,How many adults got a flu shot last year by family income?,Receipt of influenza vaccination,Receipt of influenza vaccination,Family income,Family income,,0,True,expected_not_available_for_flu

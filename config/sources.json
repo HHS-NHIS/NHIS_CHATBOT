@@ -1,0 +1,16 @@
+{
+  "adult": {
+    "name": "DHIS NHIS Adult Summary Health Statistics",
+    "population_label": "Adults",
+    "file": "data/NHIS_adult_SHS.csv",
+    "socrata_id": "25m4-6qqq",
+    "socrata_about_url": "https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data"
+  },
+  "child": {
+    "name": "DHIS NHIS Child Summary Health Statistics",
+    "population_label": "Children",
+    "file": "data/NHIS_child_SHS.csv",
+    "socrata_id": "wxz7-ekz9",
+    "socrata_about_url": "https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data"
+  }
+}

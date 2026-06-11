@@ -1,0 +1,429 @@
+==========================================================================================
+QUESTION: What percent of adults had current asthma in 2024?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: '2024 NHIS estimate'
+2024 NHIS estimate — Adults
+Current asthma
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: Show current asthma among adults by sex in 2024.
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'Highest among the returned rows'
+2024 NHIS estimate — Adults
+Current asthma by Sex
+
+Female: 10.7% (95% CI: 10.2%–11.3%)
+Male: 6.4% (95% CI: 5.9%–6.9%)
+
+Highest among the returned rows: Female in 2024: 10.7%. Lowest among the returned rows: Male in 2024: 6.4%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sex
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of adults had current asthma?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'No year was specified'
+2019–2024 NHIS estimate — Adults
+Current asthma
+
+No year was specified, so I returned all years available in the current DHIS file (2019–2024).
+
+2019 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2020 — Total: 8.4% (95% CI: 7.9%–8.8%)
+2021 — Total: 8.0% (95% CI: 7.6%–8.4%)
+2022 — Total: 8.7% (95% CI: 8.3%–9.2%)
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2019: 8.0%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2019–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: all_available
+- Years returned: 2019, 2020, 2021, 2022, 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 6
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of adults had current asthma last year?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'latest year available'
+2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: latest
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of male adults had current asthma in 2024?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'I list that subgroup first'
+2024 NHIS estimate — Adults
+Current asthma by Sex
+
+You asked about Male; I list that subgroup first and then show the rest of the Sex grouping for context.
+
+Male: 6.4% (95% CI: 5.9%–6.9%)
+Female: 10.7% (95% CI: 10.2%–11.3%)
+
+Highest among the returned rows: Female in 2024: 10.7%. Lowest among the returned rows: Male in 2024: 6.4%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sex
+- Requested group value: Male
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: Show current asthma among adults by sex and race in 2024.
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'multi-group crosstab'
+2024 NHIS estimate — Adults
+Current asthma by Sex
+
+You requested more than one grouping/subgroup. A multi-group crosstab was not available for that exact combination in the current DHIS file, so I returned the closest available single grouping and list the requested subgroup first when available.
+
+Female: 10.7% (95% CI: 10.2%–11.3%)
+Male: 6.4% (95% CI: 5.9%–6.9%)
+
+Highest among the returned rows: Female in 2024: 10.7%. Lowest among the returned rows: Male in 2024: 6.4%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sex
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of children ever had asthma in 2024?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: '2024 NHIS estimate'
+2024 NHIS estimate — Children
+Ever having asthma
+
+Total: 9.7% (95% CI: 8.9%–10.5%)
+
+Definition/excerpt from DHIS file: Based on the question, "Has a doctor or other health professional ever told you that [child's name] had asthma?"
+
+Source: DHIS NHIS Child Summary Health Statistics, 2024. Socrata ID: wxz7-ekz9. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: child
+- Outcome: Ever having asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: strong_deconfliction_phrase
+- Topic match score: 1.320
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: Show ADHD among children by age group.
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'No year was specified'
+2019–2024 NHIS estimate — Children
+Ever having attention-deficit/hyperactivity disorder by Age groups
+
+No year was specified, so I returned all years available in the current DHIS file (2019–2024).
+
+2019 — 12-17 years: 12.0% (95% CI: 10.8%–13.3%)
+2019 — 3-4 years: 1.0% (95% CI: 0.5%–2.0%)
+2019 — 5-11 years: 8.1% (95% CI: 6.9%–9.4%)
+2020 — 12-17 years: 14.4% (95% CI: 12.6%–16.3%)
+2020 — 3-4 years: 1.0% (95% CI: 0.3%–2.5%)
+2020 — 5-11 years: 9.1% (95% CI: 7.5%–10.9%)
+2021 — 12-17 years: 13.7% (95% CI: 12.3%–15.1%)
+2021 — 3-4 years: 1.2% (95% CI: 0.3%–2.8%)
+2021 — 5-11 years: 8.2% (95% CI: 7.1%–9.4%)
+2022 — 12-17 years: 14.7% (95% CI: 13.2%–16.3%)
+2022 — 3-4 years: 1.1% (95% CI: 0.5%–2.1%)
+2022 — 5-11 years: 8.6% (95% CI: 7.4%–9.8%)
+2023 — 12-17 years: 17.2% (95% CI: 15.5%–18.9%)
+2023 — 3-4 years: 1.7% (95% CI: 0.7%–3.4%)
+2023 — 5-11 years: 9.9% (95% CI: 8.7%–11.3%)
+2024 — 12-17 years: 16.2% (95% CI: 14.7%–17.7%)
+2024 — 3-4 years: 0.9% (95% CI: 0.3%–1.8%)
+2024 — 5-11 years: 11.2% (95% CI: 9.9%–12.6%)
+
+Highest among the returned rows: 12-17 years in 2023: 17.2%. Lowest among the returned rows: 3-4 years in 2024: 0.9%.
+
+Definition/excerpt from DHIS file: Based on the question "Has a doctor or other health professional ever told you that [child's name] had attention deficit hyperactivity disorder (ADHD) or attention deficit disorder (ADD)?"
+
+Source: DHIS NHIS Child Summary Health Statistics, 2019–2024. Socrata ID: wxz7-ekz9. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: child
+- Outcome: Ever having attention-deficit/hyperactivity disorder
+- Grouping label: Age groups
+- Requested group value: [none]
+- Year mode: all_available
+- Years returned: 2019, 2020, 2021, 2022, 2023, 2024
+- Topic match method: keyword_mapping
+- Topic match score: 0.950
+- Rows returned: 18
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of children were uninsured in 2023?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: '2023 NHIS estimate'
+2023 NHIS estimate — Children
+Uninsured at time of interview
+
+Total: 3.8% (95% CI: 3.3%–4.3%)
+
+Definition/excerpt from DHIS file: Based on the question, "Is [child's name] covered by any kind of health insurance or some other kind of health care plan?" and a series of questions that seek to determine the health insurance coverage type for the child. Children are considered uninsured if they did not have private health insurance, Medicare, Medicaid, Children's Health Insurance Program (CHIP), a State-sponsored health plan, other government programs, or military health plan (includes TRICARE, VA, and CHAMP-VA) at the time of interview.
+
+Source: DHIS NHIS Child Summary Health Statistics, 2023. Socrata ID: wxz7-ekz9. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Child-Summary-Health-Statistics/wxz7-ekz9/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: child
+- Outcome: Uninsured at time of interview
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2023
+- Topic match method: keyword_mapping
+- Topic match score: 0.950
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What is the SE for adults current asthma in 2024?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'Standard errors are not included'
+2024 NHIS estimate — Adults
+Current asthma
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Note: Standard errors are not included as a separate field in the current DHIS summary file used by this prototype. Confidence intervals are shown where available.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: explicit
+- Years returned: 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 1
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: What percent of adults had alien flu in 2024?
+EXPECTED: not_found | GOT: not_found | PASS
+EXPECTED CONTAINS: 'This estimate is not available'
+This estimate is not available in the current DHIS NHIS Adult/Child Summary Health Statistics file. To produce this estimate, use the relevant year's NHIS public use file and documentation from the official NHIS Questionnaires, Datasets, and Documentation page (https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.html).
+
+Relevant CDC/NHIS links: https://www.cdc.gov/nchs/nhis/documentation/2024-nhis.html; https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+Why: I could not match the requested topic to an outcome in the current adult/child DHIS files.
+==========================================================================================
+QUESTION: Where can I find the 2023 NHIS public use files?
+EXPECTED: not_found | GOT: not_found | PASS
+EXPECTED CONTAINS: 'Questionnaires'
+For NHIS public use files, questionnaires, datasets, and documentation, use the official NHIS Questionnaires, Datasets, and Documentation page: https://www.cdc.gov/nchs/nhis/documentation/2023-nhis.html. This prototype only returns precomputed adult/child Summary Health Statistics estimates from the current DHIS files; if an estimate is not available there, use the relevant year's NHIS public use files and documentation.
+==========================================================================================
+QUESTION: What percent of adults had current asthma in the last 2 years?
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'latest 2 years'
+2023–2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+2023 — Total: 8.9% (95% CI: 8.5%–9.3%)
+2024 — Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Highest among the returned rows: Total in 2023: 8.9%. Lowest among the returned rows: Total in 2024: 8.6%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Total
+- Requested group value: [none]
+- Year mode: last_n_years
+- Years returned: 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 2
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QUESTION: Current asthma among gay adult males last 2 years
+EXPECTED: ok | GOT: ok | PASS
+EXPECTED CONTAINS: 'Sexual orientation'
+2023–2024 NHIS estimate — Adults
+Current asthma by Sexual orientation
+
+You asked for the last 2 years, so I used the latest 2 years available in the current DHIS file: 2023–2024.
+
+You requested more than one grouping/subgroup. A multi-group crosstab was not available for that exact combination in the current DHIS file, so I returned the closest available single grouping and list the requested subgroup first when available.
+
+You asked about Gay or Lesbian; I list that subgroup first and then show the rest of the Sexual orientation grouping for context.
+
+2023 — Gay or Lesbian: 13.5% (95% CI: 10.3%–17.2%)
+2023 — Bisexual: 19.6% (95% CI: 15.7%–24.0%)
+2023 — Straight: 8.5% (95% CI: 8.1%–8.9%)
+2024 — Gay or Lesbian: 15.1% (95% CI: 11.7%–19.1%)
+2024 — Bisexual: 18.3% (95% CI: 14.9%–22.2%)
+2024 — Straight: 8.2% (95% CI: 7.8%–8.6%)
+
+Highest among the returned rows: Bisexual in 2023: 19.6%. Lowest among the returned rows: Straight in 2024: 8.2%.
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health professional that they had asthma. Respondents who had been told they had asthma were asked if they still had asthma.
+
+Source: DHIS NHIS Adult Summary Health Statistics, 2023–2024. Socrata ID: 25m4-6qqq. https://data.cdc.gov/National-Center-for-Health-Statistics/NHIS-Adult-Summary-Health-Statistics/25m4-6qqq/about_data
+More information: NHIS Interactive Data Query Systems: https://www.cdc.gov/nchs/nhis/products/data-query-systems.html
+
+Matched source details:
+- Population: adult
+- Outcome: Current asthma
+- Grouping label: Sexual orientation
+- Requested group value: Gay or Lesbian
+- Year mode: last_n_years
+- Years returned: 2023, 2024
+- Topic match method: manual_synonym
+- Topic match score: 1.050
+- Rows returned: 6
+- Reliability fields present: CR_P_RELIABLE, CR_Q_RELIABLE, P_CLERICAL, ZERO, KG_FLAG
+==========================================================================================
+QC complete. Passed: 14 / 14
+Phase 3 QC complete. Passed: 7 / 7
+Report: /mnt/data/phase6b_work/dhis_nhis_chatbot/tests/qc_reports/phase3_api_faq_qc_report.csv
+Phase 4A QC complete. Passed: 8 / 8
+Report: /mnt/data/phase6b_work/dhis_nhis_chatbot/tests/qc_reports/phase4_widget_faq_qc_report.csv
+Phase 5 feedback/API QC: 10 / 10 passed
+Report: /mnt/data/phase6b_work/dhis_nhis_chatbot/tests/qc_reports/phase5_feedback_qc_report.csv
+Feedback log: /mnt/data/phase6b_work/dhis_nhis_chatbot/data/feedback/feedback_log.csv
+
+Phase 6 OpenAI layer QC: 7 / 7 passed
+PASS	OpenAI disabled without key	{'requested_for_this_call': False, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}
+PASS	use_model without key returns deterministic answer	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	metadata records missing key	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	ask with use_model no key still succeeds	2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt
+PASS	ask result includes model metadata	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	model metadata indicates no model used	{'openai': {'requested_for_this_call': True, 'enabled_by_environment': False, 'api_key_present': False, 'effective_enabled': False, 'model': 'gpt-4.1-mini', 'mode': 'model_polishing_only', 'guardrail': 'Model may only rewrite retrieved estimate/FAQ output; it must not generate estimates or sources.'}, 'used_model': False, 'fallback_to_deterministic': True, 'reason': 'OPENAI_API_KEY_not_set'}
+PASS	FAQ with use_model no key still returns a routed result	{'status': 'ok', 'mode': 'faq', 'answer': 'The NHIS documentation page links to year-specific questionnaires, datasets, and documentation for 2019 through 2025 and to archived resources for earlier survey years. Use the relevant year page to find public use data files, questionnaires, analytic notes
+Phase 6B teen redirect QC: 11 / 11 passed
+PASS	teen redirect: What percent of teens had current asthma last year?	{'status': 'not_found', 'mode': 'teen_redirect', 'question': 'What percent of teens had current asthma last year?', 'answer': 'Teen estimates are not included in this adult/child NHIS Summary Health Statistics prototype yet. For teen-specific estimates, use the NHIS Teen Summary Health Statistics tool: https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'citations': ['https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html'], 'source_cards': [{'title': 'NHIS Teen Summary Health Sta
+PASS	teen redirect source card: What percent of teens had current asthma last year?	[{'title': 'NHIS Teen Summary Health Statistics tool', 'url': 'https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'source_type': 'teen_shs_redirect', 'excerpt': 'Use this teen-specific NHIS Data Query Tool for teen Summary Health Statistics estimates.'}]
+PASS	teen redirect: How many adolescents got a flu shot last year?	{'status': 'not_found', 'mode': 'teen_redirect', 'question': 'How many adolescents got a flu shot last year?', 'answer': 'Teen estimates are not included in this adult/child NHIS Summary Health Statistics prototype yet. For teen-specific estimates, use the NHIS Teen Summary Health Statistics tool: https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'citations': ['https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html'], 'source_cards': [{'title': 'NHIS Teen Summary Health Statisti
+PASS	teen redirect source card: How many adolescents got a flu shot last year?	[{'title': 'NHIS Teen Summary Health Statistics tool', 'url': 'https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'source_type': 'teen_shs_redirect', 'excerpt': 'Use this teen-specific NHIS Data Query Tool for teen Summary Health Statistics estimates.'}]
+PASS	teen redirect: What percent of teenagers were uninsured in 2024?	{'status': 'not_found', 'mode': 'teen_redirect', 'question': 'What percent of teenagers were uninsured in 2024?', 'answer': 'Teen estimates are not included in this adult/child NHIS Summary Health Statistics prototype yet. For teen-specific estimates, use the NHIS Teen Summary Health Statistics tool: https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'citations': ['https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html'], 'source_cards': [{'title': 'NHIS Teen Summary Health Stati
+PASS	teen redirect source card: What percent of teenagers were uninsured in 2024?	[{'title': 'NHIS Teen Summary Health Statistics tool', 'url': 'https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'source_type': 'teen_shs_redirect', 'excerpt': 'Use this teen-specific NHIS Data Query Tool for teen Summary Health Statistics estimates.'}]
+PASS	teen redirect: Show youth depression estimates last year.	{'status': 'not_found', 'mode': 'teen_redirect', 'question': 'Show youth depression estimates last year.', 'answer': 'Teen estimates are not included in this adult/child NHIS Summary Health Statistics prototype yet. For teen-specific estimates, use the NHIS Teen Summary Health Statistics tool: https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'citations': ['https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html'], 'source_cards': [{'title': 'NHIS Teen Summary Health Statistics t
+PASS	teen redirect source card: Show youth depression estimates last year.	[{'title': 'NHIS Teen Summary Health Statistics tool', 'url': 'https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html', 'source_type': 'teen_shs_redirect', 'excerpt': 'Use this teen-specific NHIS Data Query Tool for teen Summary Health Statistics estimates.'}]
+PASS	adult estimate unaffected	2024 NHIS estimate — Adults
+Current asthma
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 8.6% (95% CI: 8.2%–9.0%)
+
+Definition/excerpt from DHIS file: Respondents were asked if they had ever been told by a doctor or other health profe
+PASS	child estimate unaffected	2024 NHIS estimate — Children
+Receipt of influenza vaccination
+
+You asked for the latest/last year, so I used the latest year available in the current DHIS file: 2024.
+
+Total: 43.7% (95% CI: 42.3%–45.2%)
+
+Definition/excerpt from DHIS file: Based on the question, "There are two types of flu vaccinati
+PASS	FAQ routing unaffected	{'status': 'ok', 'mode': 'faq', 'answer': 'The NHIS documentation page links to year-specific questionnaires, datasets, and documentation for 2019 through 2025 and to archived resources for earlier survey years. Use the relevant year page to find public use data files, questionnaires, analytic notes
