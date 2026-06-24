@@ -17,10 +17,7 @@ COMMON_ESTIMATE_TOPICS = [
 ]
 
 TEEN_REDIRECT_URL = "https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html"
-TEEN_TERMS = [
-    "teen", "teens", "teenager", "teenagers",
-    "nhis teen", "nhis-teen", "teen shs", "teen summary"
-]
+TEEN_TERMS = ["teen", "teens", "teenager", "teenagers", "nhis teen", "nhis-teen", "teen shs", "teen summary"]
 
 
 def looks_like_teen_question(question: str) -> bool:
@@ -49,11 +46,7 @@ def teen_redirect_response(question: str) -> dict:
         "why": [
             "This question explicitly mentioned teens/teenagers or the NHIS Teen tool. Teen estimates are intentionally routed to the NHIS Teen Summary Health Statistics tool instead of the adult/child SHS prototype."
         ],
-        "debug": {
-            "reason": "teen_exception_redirect",
-            "teen_terms": TEEN_TERMS,
-            "redirect_url": TEEN_REDIRECT_URL
-        }
+        "debug": {"reason": "teen_exception_redirect", "teen_terms": TEEN_TERMS, "redirect_url": TEEN_REDIRECT_URL}
     }
 
 PARTICIPATION_OR_IMPACT_FAQ_TERMS = [
@@ -66,28 +59,21 @@ PARTICIPATION_OR_IMPACT_FAQ_TERMS = [
     "helped with cancer", "helped with insulin", "helped with hearing aids"
 ]
 
+
 def looks_like_participation_or_impact_faq(question: str) -> bool:
     q = normalize_text(question)
     if any(term in q for term in PARTICIPATION_OR_IMPACT_FAQ_TERMS):
         return True
-
-    # Broader participant/resource routing. This intentionally catches wording like
-    # "why should teens participate" before the teen-estimate exception runs.
     participant_words = [
         "participate", "participating", "participation", "selected", "respondent",
         "interview", "legitimate", "privacy", "private", "confidential", "secure",
         "what to expect", "expect", "benefit", "benefits", "help real people",
         "why should", "why do", "why would", "what is in it", "what's in it"
     ]
-    resource_words = [
-        "impact", "real life benefit", "real-life benefit", "talking point",
-        "helped with", "data helped", "value", "values", "belief", "benefit"
-    ]
+    resource_words = ["impact", "real life benefit", "real-life benefit", "talking point", "helped with", "data helped", "value", "values", "belief", "benefit"]
     has_participation_intent = any(w in q for w in participant_words)
     has_resource_intent = any(w in q for w in resource_words)
     if has_participation_intent or has_resource_intent:
-        # Avoid hijacking straight estimate requests unless the query is clearly about
-        # participation/resources rather than prevalence.
         if not any(t in q for t in ["percent", "percentage", "prevalence", "estimate", "rate", "how many"]):
             return True
         if any(t in q for t in ["particip", "selected", "privacy", "confidential", "legitimate", "what to expect", "benefit", "impact", "talking point"]):
@@ -123,6 +109,21 @@ def _attach_interactive_payload(result: dict, conversation_id: str, original_que
     return result
 
 
+def _store_and_attach(cid: str, original: str, resolved: str, result: dict, context_meta: dict) -> dict:
+    new_context = update_from_result(cid, original, resolved, result)
+    return _attach_interactive_payload(result, cid, original, resolved, context_meta, new_context)
+
+
+def _faq_answer(q: str, q_original: str, cid: str, context_meta: dict, debug: bool, use_model: bool, mode: str = "faq") -> dict:
+    faq = answer_faq(q, debug=debug)
+    if faq.get("status") == "ok":
+        polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
+        faq["answer"] = polished
+        faq["model"] = model_meta
+    faq = _merge_common_payload(faq, q_original, mode)
+    return _store_and_attach(cid, q_original, q, faq, context_meta)
+
+
 def ask(
     question: str,
     debug: bool = False,
@@ -143,27 +144,20 @@ def ask(
     resolved_question = q_original
     context_meta = {"used_followup_context": False}
 
+    # V2 router priority: resolve vague/contextual follow-ups before estimate routing.
     if looks_like_followup(q_original, prior_context):
         resolved_question, context_meta, direct_response = build_resolved_question(q_original, prior_context or {}, use_model=use_model)
         if direct_response is not None:
             direct_response = _merge_common_payload(direct_response, q_original, direct_response.get("mode", "followup"))
-            return _attach_interactive_payload(direct_response, cid, q_original, resolved_question, context_meta, prior_context)
+            return _store_and_attach(cid, q_original, resolved_question, direct_response, context_meta)
 
     q = resolved_question
 
-    # Participant/impact questions should use the approved FAQ/resource index before the estimate engine.
-    # This prevents questions like "How has NHIS data helped with diabetes?" from being treated as
-    # a request for a diabetes prevalence estimate.
+    # Participant/impact questions use approved FAQ/resource index before estimate engine.
     if looks_like_participation_or_impact_faq(q):
-        faq = answer_faq(q, debug=debug)
-        if faq.get("status") == "ok":
-            polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
-            faq["answer"] = polished
-            faq["model"] = model_meta
-        faq = _merge_common_payload(faq, q_original, "faq")
-        return _attach_interactive_payload(faq, cid, q_original, q, context_meta, get_context(cid))
+        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
 
-    # Teen estimates intentionally remain outside the adult/child SHS prototype for now.
+    # Teen estimates intentionally remain outside adult/child SHS prototype for now.
     if looks_like_teen_question(q):
         result = teen_redirect_response(q)
         if use_model:
@@ -171,33 +165,26 @@ def ask(
             result["answer"] = polished
             result["model"] = model_meta
         result = _merge_common_payload(result, q_original, "teen_redirect")
-        return _attach_interactive_payload(result, cid, q_original, q, context_meta, get_context(cid))
+        return _store_and_attach(cid, q_original, q, result, context_meta)
 
-    # Estimate-like questions must go to the deterministic DHIS engine first.
+    # Estimate-like questions go to deterministic DHIS engine first.
     if looks_like_estimate_question(q):
         est = retrieve(q, debug=debug)
         if est.get("status") == "ok":
             est["mode"] = "estimate"
             est.setdefault("why", [])
             if context_meta.get("used_followup_context"):
-                est["why"].insert(0, "This was interpreted as a follow-up and resolved using the previous successful estimate context.")
+                est["why"].insert(0, "This was interpreted as a follow-up and resolved using the previous successful context.")
             est["why"].insert(0, "This was routed to the deterministic DHIS NHIS Adult/Child Summary Health Statistics estimate engine.")
             polished, model_meta = polish_answer(q, est["answer"], evidence=est, use_model=use_model)
             est["answer"] = polished
             est["model"] = model_meta
             est = _merge_common_payload(est, q_original, "estimate")
-            new_context = update_from_result(cid, q_original, q, est)
-            return _attach_interactive_payload(est, cid, q_original, q, context_meta, new_context)
+            return _store_and_attach(cid, q_original, q, est, context_meta)
 
-        # If the question is also clearly about documentation, try FAQ after estimate miss.
+        # If clearly documentation/FAQ, try FAQ after estimate miss.
         if looks_like_faq_question(q):
-            faq = answer_faq(q, debug=debug)
-            if faq.get("status") == "ok":
-                polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
-                faq["answer"] = polished
-                faq["model"] = model_meta
-                faq = _merge_common_payload(faq, q_original, "faq")
-                return _attach_interactive_payload(faq, cid, q_original, q, context_meta, get_context(cid))
+            return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
         est["mode"] = "estimate_not_found"
         est.setdefault("why", [])
         est["why"].insert(0, "This looked like an estimate request, but no matching row was found in the current DHIS adult/child SHS files.")
@@ -206,28 +193,21 @@ def ask(
 
     # Route general NHIS questions to FAQ retrieval.
     if looks_like_faq_question(q) or "nhis" in normalize_text(q):
-        faq = answer_faq(q, debug=debug)
-        if faq.get("status") == "ok":
-            polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
-            faq["answer"] = polished
-            faq["model"] = model_meta
-        faq = _merge_common_payload(faq, q_original, "faq")
-        return _attach_interactive_payload(faq, cid, q_original, q, context_meta, get_context(cid))
+        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
 
-    # Safe default: try FAQ first, then estimate. Do not invent.
+    # Safe default: FAQ first. Avoid treating very vague text as SHS estimate unless there is a stronger signal.
     faq = answer_faq(q, debug=debug)
     if faq.get("status") == "ok":
         polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
         faq["answer"] = polished
         faq["model"] = model_meta
         faq = _merge_common_payload(faq, q_original, "faq")
-        return _attach_interactive_payload(faq, cid, q_original, q, context_meta, get_context(cid))
+        return _store_and_attach(cid, q_original, q, faq, context_meta)
+
     est = retrieve(q, debug=debug)
     est["mode"] = "estimate_fallback_attempt"
     est.setdefault("why", []).insert(0, "No strong FAQ match was found, so the estimate engine was tried as a fallback.")
     est = _merge_common_payload(est, q_original, "estimate_fallback_attempt")
     if est.get("status") == "ok":
-        new_context = update_from_result(cid, q_original, q, est)
-    else:
-        new_context = get_context(cid)
-    return _attach_interactive_payload(est, cid, q_original, q, context_meta, new_context)
+        return _store_and_attach(cid, q_original, q, est, context_meta)
+    return _attach_interactive_payload(est, cid, q_original, q, context_meta, get_context(cid))

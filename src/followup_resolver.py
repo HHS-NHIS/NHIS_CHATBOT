@@ -1,12 +1,10 @@
 from __future__ import annotations
 
-"""Phase 7 follow-up resolver.
+"""NHIS Assistant V2 follow-up resolver.
 
-The resolver is conservative:
-- It only reuses prior context when the new question looks like a follow-up.
-- It never returns estimates itself; it only builds a safer resolved question for
-  the deterministic estimate/FAQ tools to answer.
-- OpenAI structured routing is optional and validated/fallback-only.
+The resolver is conservative but now supports both estimate follow-ups and
+resource/FAQ follow-ups. Vague prompts like "tell me more" inherit the prior
+answer lane instead of defaulting to the estimate engine.
 """
 
 from typing import Any, Dict, Optional, Tuple
@@ -44,36 +42,56 @@ GROUP_PHRASES = {
 CHILD_WORDS = ["child", "children", "kid", "kids", "youth", "adolescent", "adolescents", "pediatric"]
 ADULT_WORDS = ["adult", "adults", "18+", "18 and over"]
 
+VAGUE_FOLLOWUP_PHRASES = [
+    "tell me more", "more", "more detail", "more information", "explain more",
+    "can you expand", "expand", "what else", "why", "how so", "go on",
+    "continue", "keep going", "give me more detail", "say more", "additional information"
+]
+
 
 def _contains_phrase(q: str, phrase: str) -> bool:
     return bool(re.search(r"(?<![a-z0-9])" + re.escape(normalize_text(phrase)) + r"(?![a-z0-9])", q))
 
 
+def _is_vague_followup(q: str) -> bool:
+    qn = normalize_text(q).strip(" ?!.")
+    return qn in VAGUE_FOLLOWUP_PHRASES or any(qn.startswith(p + " ") for p in VAGUE_FOLLOWUP_PHRASES)
+
+
 def _has_topic_like_content(q: str) -> bool:
-    # Follow-up questions are usually short and modifier-only. If these common
-    # topic words appear, let the normal router handle it as a fresh question.
     topics = [
         "asthma", "diabetes", "flu", "influenza", "hypertension", "blood pressure",
         "uninsured", "insurance", "obesity", "smoking", "vaping", "adhd",
         "depression", "anxiety", "cholesterol", "doctor", "urgent", "care",
         "vaccination", "health status", "disability", "difficulty",
     ]
-    # Note: insurance/disability/difficulty can be both topics and groups, so a phrase
-    # like "by insurance" still counts as follow-up because it has explicit by-modifier.
     if q.startswith("by ") or " by " in f" {q} ":
         return False
     return any(t in q for t in topics)
 
 
 def looks_like_followup(question: str, context: Optional[Dict[str, Any]]) -> bool:
-    if not context or not context.get("outcome"):
+    if not context:
         return False
     q = normalize_text(question)
     if not q:
         return False
+
+    # Vague follow-ups apply to any previous answer lane: FAQ/resource, estimate,
+    # teen redirect, documentation, etc.
+    if _is_vague_followup(q):
+        return True
+
     starters = ["what about", "how about", "show", "and", "now", "instead", "compare", "what if"]
     if any(q.startswith(s) for s in starters):
         return True
+
+    # The remaining patterns are estimate-style modifiers and require an estimate context.
+    if not context.get("outcome"):
+        if any(p in q for p in ["confidence interval", "what is ci", "explain ci", "explain confidence", "where do i get", "where are the files", "data file", "puf"]):
+            return True
+        return False
+
     if q.startswith("by ") or " by " in f" {q} ":
         return True
     if any(p in q for p in ["last 2 years", "last two years", "all years", "latest year", "last year", "2024", "2023", "2022", "2021", "2020", "2019"]):
@@ -114,7 +132,6 @@ def _population_phrase(q: str, context: Dict[str, Any]) -> str:
 
 
 def _group_phrase(q: str) -> Optional[str]:
-    # Prefer longer phrases first.
     for phrase, canonical in sorted(GROUP_PHRASES.items(), key=lambda kv: len(kv[0]), reverse=True):
         if _contains_phrase(q, phrase):
             return canonical
@@ -122,7 +139,6 @@ def _group_phrase(q: str) -> Optional[str]:
 
 
 def _subgroup_phrase(q: str) -> Optional[str]:
-    # Keep simple; the existing matcher resolves actual subgroup labels.
     candidates = [
         "female", "women", "male", "men", "gay", "lesbian", "bisexual", "straight",
         "uninsured", "private insurance", "private", "medicaid", "medicare",
@@ -180,7 +196,37 @@ def build_resolved_question(question: str, context: Dict[str, Any], use_model: b
     q = normalize_text(question)
     direct = _direct_explanation(question, context)
     if direct:
-        return question, {"used_followup_context": True, "method": "direct_followup_response"}, direct
+        return question, {"used_followup_context": True, "method": "direct_followup_response", "previous_answer_type": context.get("answer_type")}, direct
+
+    answer_type = context.get("answer_type") or context.get("last_mode") or "unknown"
+
+    # Resource/FAQ/teen vague follow-up: keep the user in the prior answer lane.
+    if _is_vague_followup(q) and not context.get("outcome"):
+        prior = context.get("last_resolved_question") or context.get("last_question") or "NHIS"
+        resolved = f"{prior} {question}"
+        return resolved, {
+            "used_followup_context": True,
+            "method": "vague_followup_inherits_previous_resource_context",
+            "previous_answer_type": answer_type,
+            "previous_question": prior,
+            "resolved_question": resolved,
+        }, None
+
+    if _is_vague_followup(q) and context.get("outcome"):
+        # For estimate contexts, vague follow-ups should ask for interpretation rather than a fake new estimate.
+        direct = {
+            "status": "ok",
+            "mode": "estimate_explanation_followup",
+            "answer": (
+                "This was a follow-up to the previous estimate answer. The prior result came from the DHIS NHIS Summary Health Statistics files. "
+                "You can ask for a different breakout, such as 'show by sex', 'show by age', 'show by SVI', 'show last 2 years', or 'explain the confidence interval.'"
+            ),
+            "citations": [],
+            "source_cards": context.get("source_cards") or [],
+            "why": ["You asked a vague follow-up after an estimate answer, so the assistant stayed in the estimate context instead of starting a new topic."],
+            "debug": {"reason": "vague_estimate_followup", "previous_context": context},
+        }
+        return question, {"used_followup_context": True, "method": "vague_estimate_followup_direct_response", "previous_answer_type": answer_type}, direct
 
     model_plan, model_meta = resolve_followup_with_model(question, context, use_model=use_model)
 
@@ -190,7 +236,6 @@ def build_resolved_question(question: str, context: Dict[str, Any], use_model: b
     group = _group_phrase(q)
     subgroup = _subgroup_phrase(q)
 
-    # If the optional model returns a safe plan, allow it to override only supported fields.
     if model_plan:
         population = model_plan.get("population") if model_plan.get("population") in {"adults", "children"} else population
         year = model_plan.get("year_phrase") or year
@@ -203,7 +248,6 @@ def build_resolved_question(question: str, context: Dict[str, Any], use_model: b
     elif subgroup:
         parts.append(f"among {subgroup}")
     if subgroup and group:
-        # Keep subgroup wording too so the existing matcher can list that subgroup first.
         parts.append(f"for {subgroup}")
     resolved = " ".join(parts).strip() + "?"
     meta = {
@@ -212,6 +256,7 @@ def build_resolved_question(question: str, context: Dict[str, Any], use_model: b
         "original_question": question,
         "resolved_question": resolved,
         "previous_context": context,
+        "previous_answer_type": answer_type,
         "detected_population_phrase": population,
         "detected_year_phrase": year,
         "detected_group_phrase": group,
@@ -222,10 +267,16 @@ def build_resolved_question(question: str, context: Dict[str, Any], use_model: b
 
 
 def suggested_followups(context: Optional[Dict[str, Any]], result: Optional[Dict[str, Any]] = None) -> list[str]:
+    answer_type = (context or {}).get("answer_type") or (result or {}).get("mode")
+    if answer_type in {"participation_resource", "general_nhis_faq", "faq"}:
+        return ["Tell me more", "Is my information private?", "What should I expect?", "How does NHIS help real people?", "How has NHIS data helped with diabetes?"]
+    if answer_type == "teen_redirect":
+        return ["Why should teens participate?", "Where is the teen SHS tool?", "What about children?", "Start over"]
     if not context or not context.get("outcome"):
         return [
             "What percent of adults had current asthma last year?",
             "Show diabetes by SVI",
+            "Why should I participate in NHIS?",
             "Where can I find the 2024 NHIS public use files?",
         ]
     suggestions = []
@@ -239,7 +290,6 @@ def suggested_followups(context: Optional[Dict[str, Any]], result: Optional[Dict
     if "social vulnerability" not in label:
         suggestions.append("Show by SVI")
     suggestions.extend(["Show last 2 years", "Where do I get the data?", "Explain the confidence interval"])
-    # de-duplicate preserving order
     out = []
     for s in suggestions:
         if s not in out:

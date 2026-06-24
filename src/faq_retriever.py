@@ -7,7 +7,8 @@ from collections import Counter
 from normalize_text import normalize_text
 
 ROOT = Path(__file__).resolve().parents[1]
-FAQ_INDEX_PATH = ROOT / "data" / "faq_index" / "faq_index_seed.json"
+FAQ_INDEX_PATH = ROOT / "resources" / "generated" / "faq_index_seed.json"
+LEGACY_FAQ_INDEX_PATH = ROOT / "data" / "faq_index" / "faq_index_seed.json"
 
 STOPWORDS = {
     "a", "an", "and", "are", "as", "at", "be", "by", "can", "do", "does", "for",
@@ -50,7 +51,13 @@ PHRASE_BOOSTS = [
 
 
 def load_faq_index(path: Path = FAQ_INDEX_PATH) -> list[dict]:
-    """Load the local approved-source FAQ index."""
+    """Load the local approved-source FAQ index.
+
+    V2 prefers the editable generated resource index in resources/generated/.
+    If that has not been built yet, it falls back to the legacy demo seed index.
+    """
+    if not path.exists():
+        path = LEGACY_FAQ_INDEX_PATH
     if not path.exists():
         return []
     data = json.loads(path.read_text(encoding="utf-8"))
@@ -163,6 +170,14 @@ def _best_excerpt(question: str, text: str, max_chars: int = 520) -> str:
     return best
 
 
+
+def _wants_more_detail(question: str) -> bool:
+    q = normalize_text(question)
+    return any(p in q for p in [
+        "tell me more", "more detail", "more information", "explain more", "expand",
+        "what else", "say more", "additional information", "go on", "continue"
+    ])
+
 def answer_faq(question: str, debug: bool = False) -> dict:
     results = search_faq(question)
     if not results or results[0]["score"] < 0.25:
@@ -180,12 +195,23 @@ def answer_faq(question: str, debug: bool = False) -> dict:
 
     top = results[0]
     lines = []
-    lines.append(top["excerpt"] or top.get("text", ""))
-    lines.append("")
-    if top.get('url') and str(top.get('url')).startswith(('http://', 'https://')):
-        lines.append(f"Source: {top['title']}. {top['url']}")
+    detail_mode = _wants_more_detail(question)
+    if detail_mode and len(results) > 1:
+        lines.append("Here is a little more detail from the approved NHIS resource index:")
+        lines.append("")
+        for r in results[:3]:
+            excerpt = r.get("excerpt") or r.get("text", "")
+            lines.append(f"{r['title']}: {excerpt}")
+            if r.get('url') and str(r.get('url')).startswith(('http://', 'https://')):
+                lines.append(f"Source: {r['url']}")
+            lines.append("")
     else:
-        lines.append(f"Source: {top['title']}.")
+        lines.append(top["excerpt"] or top.get("text", ""))
+        lines.append("")
+        if top.get('url') and str(top.get('url')).startswith(('http://', 'https://')):
+            lines.append(f"Source: {top['title']}. {top['url']}")
+        else:
+            lines.append(f"Source: {top['title']}.")
     if len(results) > 1:
         lines.append("")
         lines.append("Additional relevant NHIS sources:")
