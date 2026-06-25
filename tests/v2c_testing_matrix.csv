@@ -21,3 +21,4 @@ insurance_covariate,1,What percent of adults had asthma by insurance status?,est
 overlap_uninsured,1,Uninsured kids got a flu shot last year,estimate,Flu shot remains topic; uninsured is subgroup/covariate cue
 overlap_uninsured_topic,1,Kids were uninsured last year,estimate,Uninsured remains topic
 ambiguous_no_context,1,tell me more,clarification_or_safe_fallback,Does not invent an estimate when no prior context exists
+insurance_under65_special,1,What percent of adults had insurance last year by insurance for people under 65?,insurance_special,Under-65 insurance-as-topic/status question uses insurance special handling instead of not_found

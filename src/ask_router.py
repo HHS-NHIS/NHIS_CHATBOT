@@ -14,7 +14,10 @@ ESTIMATE_TERMS = [
 
 COMMON_ESTIMATE_TOPICS = [
     "asthma", "diabetes", "hypertension", "flu shot", "flu vaccine", "influenza", "uninsured",
-    "obesity", "smoking", "vaping", "adhd", "depression", "anxiety", "cholesterol", "insurance"
+    "obesity", "smoking", "vaping", "adhd", "depression", "anxiety", "cholesterol", "insurance",
+    "disability", "disabled", "difficulty", "functioning difficulty", "functional difficulty",
+    "workdays", "missed work", "missed school", "special education", "learning disability",
+    "foreign born", "us-born", "u.s. born", "veteran", "social vulnerability", "svi"
 ]
 
 TEEN_REDIRECT_URL = "https://wwwn.cdc.gov/NHISDataQueryTool/NHIS_teen/index.html"

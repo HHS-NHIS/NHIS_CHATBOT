@@ -65,6 +65,10 @@ MANUAL_TOPIC_SYNONYMS = {
     "school absences": ["Missing 11 or more school days due to illness or injury"],
     "school absence": ["Missing 11 or more school days due to illness or injury"],
     "missed school": ["Missing 11 or more school days due to illness or injury"],
+    "missed work": ["Six or more workdays missed due to illness, injury, or disability"],
+    "missed workdays": ["Six or more workdays missed due to illness, injury, or disability"],
+    "missed six or more workdays": ["Six or more workdays missed due to illness, injury, or disability"],
+    "six or more workdays missed": ["Six or more workdays missed due to illness, injury, or disability"],
     "disabled": ["Disability status (composite)"],
     "with disability": ["Disability status (composite)"],
 }
@@ -308,6 +312,20 @@ def _resolve_mapped_topic(mapped_topic: str, outcomes: list[str]) -> Optional[st
     return best_o if best_or >= 0.74 else None
 
 
+
+def _has_clear_non_difficulty_topic(q: str) -> bool:
+    """Return True when difficulty/functioning words are likely subgroup context, not the topic."""
+    clear_terms = [
+        "asthma", "diabetes", "flu shot", "flu vaccine", "influenza", "hypertension",
+        "blood pressure", "obesity", "smoking", "vaping", "cigarette", "e-cigarette",
+        "doctor visit", "usual place", "urgent care", "retail clinic", "emergency department",
+        "ed visit", "well child", "wellness visit", "cholesterol", "cancer", "arthritis",
+        "heart attack", "coronary", "angina", "copd", "pneumococcal", "dental",
+        "prescription medication", "anxiety", "depression", "mental health", "school days",
+        "learning disability", "adhd", "special education"
+    ]
+    return any(t in q for t in clear_terms)
+
 def match_topic(question: str, df: pd.DataFrame, keyword_mappings: dict) -> tuple[Optional[str], dict]:
     q = normalize_text(question)
     # Treat text before an explicit "by ..." as the topic portion.
@@ -335,10 +353,36 @@ def match_topic(question: str, df: pd.DataFrame, keyword_mappings: dict) -> tupl
         outcome = _resolve_mapped_topic("Receiving special education or early intervention services", outcomes)
         if outcome and 1.30 > best["score"]:
             best = {"score": 1.30, "keyword": "special education", "mapped_topic": "Receiving special education or early intervention services", "method": "strong_deconfliction_phrase", "outcome": outcome}
+    # Cost-related mental health care must win over generic mental-health-service/counseling wording.
+    if any(p in q for p in [
+        "needed mental health care but did not get it due to cost",
+        "did not get needed mental health care due to cost",
+        "could not afford mental health care", "couldnt afford mental health care",
+        "mental health care due to cost", "mental health care because of cost",
+        "needed mental health care due to cost"
+    ]):
+        outcome = _resolve_mapped_topic("Did not get needed mental health care due to cost", outcomes)
+        if outcome and 1.335 > best["score"]:
+            best = {"score": 1.335, "keyword": "mental health care due to cost", "mapped_topic": "Did not get needed mental health care due to cost", "method": "strong_deconfliction_phrase", "outcome": outcome}
+
     if any(p in q for p in ["mental health services"]):
         outcome = _resolve_mapped_topic("Receive services for mental health problems", outcomes)
         if outcome and 1.29 > best["score"]:
             best = {"score": 1.29, "keyword": "mental health services", "mapped_topic": "Receive services for mental health problems", "method": "strong_deconfliction_phrase", "outcome": outcome}
+
+    # Generic difficulty/functioning questions should use the composite when no specific
+    # seeing/hearing/walking/etc. difficulty was named. Specific adult difficulty outcomes
+    # still win through normal mapping/fuzzy matching.
+    if any(p in q for p in ["difficulty", "difficulties", "functional limitation", "functioning problem", "functioning difficulty"]):
+        specific_difficulty_terms = ["seeing", "vision", "hearing", "communicating", "remembering", "concentrating", "walking", "climbing", "self care", "self-care"]
+        # Only make difficulty the topic when no other clear health/SHS topic is named.
+        # Example: "children with functioning difficulty had asthma" should be asthma
+        # by Difficulty Status, not the Difficulty status composite outcome itself.
+        if not any(t in q for t in specific_difficulty_terms) and not _has_clear_non_difficulty_topic(q):
+            outcome = _resolve_mapped_topic("Difficulty status (composite)", outcomes)
+            if outcome and 1.285 > best["score"]:
+                best = {"score": 1.285, "keyword": "difficulty composite", "mapped_topic": "Difficulty status (composite)", "method": "strong_deconfliction_phrase", "outcome": outcome}
+
     if any(p in q for p in ["anxiety medicine", "anxiety medication", "anxiety meds", "medication for anxiety", "medicine for anxiety"]):
         outcome = _resolve_mapped_topic("Taking prescription medication for feelings of worry, nervousness, or anxiety", outcomes)
         if outcome:
@@ -363,6 +407,10 @@ def match_topic(question: str, df: pd.DataFrame, keyword_mappings: dict) -> tupl
         outcome = _resolve_mapped_topic("Missing 11 or more school days due to illness or injury", outcomes)
         if outcome and 1.22 > best["score"]:
             best = {"score": 1.22, "keyword": "school absences", "mapped_topic": "Missing 11 or more school days due to illness or injury", "method": "strong_deconfliction_phrase", "outcome": outcome}
+    if any(p in q for p in ["missed work", "missed workdays", "missed six or more workdays", "six or more workdays missed", "six or more missed workdays"]):
+        outcome = _resolve_mapped_topic("Six or more workdays missed due to illness, injury, or disability", outcomes)
+        if outcome and 1.225 > best["score"]:
+            best = {"score": 1.225, "keyword": "missed workdays", "mapped_topic": "Six or more workdays missed due to illness, injury, or disability", "method": "strong_deconfliction_phrase", "outcome": outcome}
 
     # Strong action phrases: these are common user phrasings where another word in the
     # same question may be a subgroup (for example, "uninsured kids got a flu shot").
@@ -783,12 +831,17 @@ def detect_group_intent(question: str, df: pd.DataFrame, keyword_mappings: dict 
     if values and not labels:
         labels = _labels_for_values(df, values)
 
-    # If both an explicit label and subgroup values exist, keep only values that can belong to the chosen label first.
+    # If both an explicit label and subgroup values exist, keep only values that can belong to the
+    # chosen label first. Track values that belong to a different grouping so the final answer can
+    # be transparent instead of silently dropping a requested subgroup (for example, "men by
+    # sexual orientation" when no sex × sexual-orientation crosstab exists).
+    out_of_label_values = []
     if labels and values:
         primary = labels[0]
         label_values = [v for v in values if _value_belongs_to_label(df, v, primary)]
+        out_of_label_values = [v for v in values if v not in label_values]
         if label_values:
-            values = label_values + [v for v in values if v not in label_values]
+            values = label_values + out_of_label_values
 
     # Try a true composite/crosstab grouping if the user requested multiple dimensions.
     if len(labels) > 1:
@@ -833,12 +886,19 @@ def detect_group_intent(question: str, df: pd.DataFrame, keyword_mappings: dict 
                         break
             else:
                 group_value = values[0]
+        explanation = None
+        if labels and values and not group_value and out_of_label_values:
+            explanation = (
+                "You named a subgroup from another grouping, but an exact crosstab for that "
+                "combination was not available in the current DHIS file. I returned the requested "
+                f"{label or labels[0]} grouping for the full population instead."
+            )
         return label or infer_label_for_value(df, group_value or "") or "Total", group_value, {
             "wants_breakdown": wants_breakdown or bool(group_value),
             "requested_keys": labels,
             "requested_values": values,
             "is_composite": False,
-            "explanation": None,
+            "explanation": explanation,
             "subgroup_first": bool(group_value),
         }
 

@@ -57,6 +57,9 @@ r=run_seq("ins_adult", ["How many people had insurance by insurance status?"])
 check(r[0].get('mode')=='estimate' and r[0].get('status')=='ok' and 'insurance coverage estimates' in r[0].get('answer','').lower(), 'insurance_topic_status_adult_special')
 r=run_seq("ins_child", ["What percent of children had insurance by insurance status?"])
 check(r[0].get('mode')=='estimate' and r[0].get('status')=='ok' and 'insurance coverage estimates' in r[0].get('answer','').lower(), 'insurance_topic_status_child_special')
+
+r=run_seq("ins_under65", ["What percent of adults had insurance last year by insurance for people under 65?"])
+check(r[0].get('mode')=='estimate' and r[0].get('status')=='ok' and '2024' in r[0].get('answer','') and 'insurance coverage estimates' in r[0].get('answer','').lower(), 'insurance_under65_by_insurance_special')
 r=run_seq("ins_cov", ["What percent of adults had asthma by insurance status?"])
 check(r[0].get('mode')=='estimate' and r[0].get('status')=='ok' and 'Current asthma' in r[0].get('answer',''), 'insurance_covariate_still_works')
 
@@ -69,7 +72,7 @@ check(r[1].get('mode')=='estimate' and 'Uninsured at time of interview' in r[1].
 r=run_seq("no_context", ["tell me more"])
 check(r[0].get('status') in {'not_found','error'} or r[0].get('mode') != 'estimate', 'no_context_tell_me_more_safe')
 
-TOTAL_CHECKS = 19
+TOTAL_CHECKS = 20
 print(f"\nV2C conversational orchestrator QC: {TOTAL_CHECKS-len(failures)} / {TOTAL_CHECKS} passed")
 if failures:
     raise SystemExit(1)

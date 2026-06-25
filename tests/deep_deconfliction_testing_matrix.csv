@@ -1,0 +1,61 @@
+id,query_or_sequence,expected_status,expected_mode,expected_outcome,expected_label,expected_group,answer_contains
+lane_faq_to_more,Why should I participate in NHIS? || tell me more,ok,faq,,,,Source
+lane_faq_to_teen_est,Why should I participate in NHIS? || What percent of teens had asthma last year?,,teen_redirect,,,,Teen Summary Health Statistics
+lane_faq_to_adult_est,Why should I participate in NHIS? || What percent of adults had diabetes last year?,ok,estimate,Diagnosed diabetes,,,
+lane_est_to_faq,What percent of adults had diabetes last year? || Why should I participate in NHIS?,ok,faq,,,,
+lane_est_followup_svi,What percent of adults had diabetes last year? || What about by SVI?,ok,estimate,,Social vulnerability,,
+lane_no_context_vague,tell me more,,,,,,
+ins_topic_status_adult,How many people had insurance by insurance status?,ok,estimate,,,,insurance coverage estimates
+ins_topic_status_under65,What percent of adults had insurance last year by insurance for people under 65?,ok,estimate,,,,insurance coverage estimates
+ins_private_under65,What percent of adults under 65 had private insurance last year?,ok,estimate,,,,18-34 years
+ins_private_over65,What percent of adults 65 and older had private insurance last year?,ok,estimate,,,,***
+ins_uninsured_under65,What percent of adults under 65 were uninsured last year?,ok,estimate,,,,18-34 years
+ins_public_over65,What percent of adults 65 and over had public coverage last year?,ok,estimate,,,,***
+ins_child_status,What percent of children had insurance by insurance status last year?,ok,estimate,,,,Uninsured at time of interview
+ins_child_uninsured,How many kids were uninsured last year?,ok,estimate,,,,Uninsured at time of interview
+ins_covariate_adult_asthma,What percent of adults had asthma by insurance status last year?,ok,estimate,Current asthma,Health insurance coverage,,
+ins_covariate_child_flu_uninsured,What percent of uninsured kids got a flu shot last year?,ok,estimate,Receipt of influenza vaccination,Health insurance coverage,Uninsured,
+ins_covariate_child_flu_private,What percent of children with private insurance got a flu shot last year?,ok,estimate,Receipt of influenza vaccination,Health insurance coverage,Private,
+income_by_income,What percent of adults had diabetes by income last year?,ok,estimate,Diagnosed diabetes,Family income,,
+income_by_household_income,What percent of adults had diabetes by household income last year?,ok,estimate,Diagnosed diabetes,Family income,,
+income_by_poverty,What percent of adults had diabetes by poverty status last year?,ok,estimate,Diagnosed diabetes,Family income,,
+income_by_fpl,What percent of adults had diabetes by FPL last year?,ok,estimate,Diagnosed diabetes,Family income,,
+income_below_poverty,What percent of adults below poverty had diabetes last year?,ok,estimate,Diagnosed diabetes,Family income,Less than 100% FPL,
+asthma_generic_adult,What percent of adults had asthma last year?,ok,estimate,Current asthma,,,
+asthma_current_adult,What percent of adults had current asthma last year?,ok,estimate,Current asthma,,,
+asthma_attack_adult,What percent of adults had an asthma attack last year?,ok,estimate,Asthma episode/attack,,,
+asthma_ever_child,What percent of children ever had asthma last year?,ok,estimate,Ever having asthma,,,
+asthma_current_child,What percent of children had current asthma last year?,ok,estimate,Current asthma,,,
+mh_cost,What percent of adults needed mental health care but did not get it due to cost last year?,ok,estimate,Did not get needed mental health care due to cost,,,
+cost_medical,What percent of adults could not afford care last year?,ok,estimate,Did not get needed medical care due to cost,,,
+cost_skipped_meds,What percent of adults skipped medication to save money last year?,ok,estimate,Did not take medication as prescribed to save money,,,
+anxiety_feelings,What percent of adults had anxiety last year?,ok,estimate,"Regularly had feelings of worry, nervousness, or anxiety",,,
+anxiety_medication,What percent of adults took medication for anxiety last year?,ok,estimate,"Taking prescription medication for feelings of worry, nervousness, or anxiety",,,
+depression_feelings,What percent of adults had depression last year?,ok,estimate,Regularly had feelings of depression,,,
+depression_medication,What percent of adults took medication for depression last year?,ok,estimate,Taking prescription medication for feelings of depression,,,
+sex_women,What percent of women had current asthma last year?,ok,estimate,Current asthma,Sex,Female,
+race_ethnicity,What percent of adults had current asthma by race and ethnicity last year?,ok,estimate,Current asthma,Hispanic or Latino origin and race,,
+hispanic_subgroup,What percent of Hispanic adults had current asthma last year?,ok,estimate,Current asthma,Hispanic or Latino origin and race,Hispanic,
+gay_men_current_asthma,What percent of gay men had current asthma last year?,ok,estimate,Current asthma,Sexual orientation,Gay or Lesbian,multi-group crosstab
+men_by_sexual_orientation_warning,What percent of men had current asthma by sexual orientation last year?,ok,estimate,Current asthma,Sexual orientation,,exact crosstab
+svi_group,What percent of adults had current asthma by SVI last year?,ok,estimate,Current asthma,Social vulnerability,,
+high_svi_subgroup,What percent of high SVI adults had current asthma last year?,ok,estimate,Current asthma,Social vulnerability,High social vulnerability,
+child_learning_disability,What percent of children had a learning disability last year?,ok,estimate,Ever having a learning disability,,,
+child_special_education,What percent of children got special education last year?,ok,estimate,Receiving special education or early intervention services,,,
+child_missed_school,What percent of kids missed school last year?,ok,estimate,Missing 11 or more school days due to illness or injury,,,
+child_adhd,What percent of kids had ADHD last year?,ok,estimate,Ever having attention-deficit/hyperactivity disorder,,,
+child_disability,What percent of children had a disability last year?,ok,estimate,Disability status (composite),,,
+child_difficulty,What percent of children had difficulty last year?,ok,estimate,Difficulty status (composite),,,
+disabled_child_asthma,What percent of disabled children had asthma last year?,ok,estimate,Current asthma,Disability Status,With disability,
+adult_urgent_or_retail,What percent of adults had urgent care or retail clinic visit last year?,ok,estimate,Urgent care center or retail health clinic visit,,,
+adult_urgent,What percent of adults went to urgent care last year?,ok,estimate,Urgent care center visit,,,
+adult_retail,What percent of adults went to a retail clinic last year?,ok,estimate,Retail health clinic visit,,,
+child_urgent_or_retail,What percent of children went to urgent care or retail clinic last year?,ok,estimate,Two or more urgent care center or retail health clinic visits,,,
+child_urgent,What percent of children went to urgent care last year?,ok,estimate,Two or more urgent care center visits,,,
+child_retail,What percent of children went to a retail clinic last year?,ok,estimate,Two or more retail health clinic visits,,,
+faq_participate,Why should I participate in NHIS?,ok,faq,,,,
+faq_privacy,Is my information private?,ok,faq,,,,
+faq_impact_diabetes,How has NHIS helped with diabetes?,ok,faq,,,,
+faq_benefits,What are real life benefits of NHIS?,ok,faq,,,,
+teen_participate,Why should teens participate?,ok,faq,,,,
+teen_estimate_redirect,What percent of teens had asthma last year?,,teen_redirect,,,,
