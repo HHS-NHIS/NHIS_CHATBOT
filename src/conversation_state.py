@@ -76,26 +76,49 @@ def summarize_context(ctx: Optional[Dict[str, Any]]) -> Dict[str, Any]:
         return {}
     keys = [
         "last_question", "last_resolved_question", "last_mode", "answer_type", "population",
-        "outcome", "label", "group", "years", "source_titles", "source_urls", "updated_at",
+        "outcome", "label", "group", "years", "source_titles", "source_urls", "faq_repeat_count", "recent_turns", "updated_at",
     ]
     return {k: ctx.get(k) for k in keys if k in ctx}
 
+
+
+def _topic_key_from_result(result: Dict[str, Any], resolved_question: str) -> str:
+    mode = str(result.get("mode") or "").lower()
+    if mode == "estimate":
+        debug = result.get("debug") or {}
+        return "estimate:" + str(debug.get("outcome") or resolved_question).lower()[:120]
+    cards = result.get("source_cards") or []
+    if cards and isinstance(cards[0], dict):
+        return "resource:" + str(cards[0].get("title") or cards[0].get("url") or resolved_question).lower()[:120]
+    return (mode or "unknown") + ":" + str(resolved_question).lower()[:120]
+
+def get_recent_turns(conversation_id: str | None, limit: int = 6) -> list[Dict[str, Any]]:
+    if not conversation_id:
+        return []
+    return _TURNS.get(conversation_id, [])[-limit:]
 
 def update_from_result(conversation_id: str, original_question: str, resolved_question: str, result: Dict[str, Any]) -> Dict[str, Any]:
     """Store the last useful context for any answer lane, not just estimates."""
     now = datetime.now(timezone.utc).isoformat()
     turns = _TURNS.setdefault(conversation_id, [])
+    answer_type = _answer_type_from_result(result)
+    topic_key = _topic_key_from_result(result, resolved_question)
+    prev_ctx = _CONTEXTS.get(conversation_id, {})
+    faq_repeat_count = 1
+    if answer_type in {"participation_resource", "general_nhis_faq"} and prev_ctx.get("topic_key") == topic_key:
+        faq_repeat_count = int(prev_ctx.get("faq_repeat_count") or 1) + 1
+
     turns.append({
         "turn_id": len(turns) + 1,
         "user_question": original_question,
         "resolved_question": resolved_question,
         "mode": result.get("mode"),
         "status": result.get("status"),
-        "answer_type": _answer_type_from_result(result),
+        "answer_type": answer_type,
+        "topic_key": topic_key,
+        "answer_excerpt": str(result.get("answer") or "")[:700],
         "created_at": now,
     })
-
-    answer_type = _answer_type_from_result(result)
     debug = result.get("debug") or {}
     source_cards = result.get("source_cards") or []
     source_titles = [str(c.get("title")) for c in source_cards if isinstance(c, dict) and c.get("title")]
@@ -121,6 +144,9 @@ def update_from_result(conversation_id: str, original_question: str, resolved_qu
         "source_urls": source_urls,
         "source_cards": source_cards,
         "last_answer_excerpt": str(result.get("answer") or "")[:1200],
+        "topic_key": topic_key,
+        "faq_repeat_count": faq_repeat_count,
+        "recent_turns": get_recent_turns(conversation_id, limit=6),
         "turn_count": len(turns),
         "updated_at": now,
     }

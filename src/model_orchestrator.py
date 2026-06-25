@@ -166,3 +166,66 @@ Use null for unknown/unchanged. Keep grouping/subgroup plain English, e.g. SVI, 
         meta["error_type"] = type(exc).__name__
         meta["error_message"] = str(exc)[:500]
         return None, meta
+
+RESOURCE_SYSTEM_PROMPT = """You are an NHIS assistant answering from retrieved approved NHIS source content.
+
+Rules:
+1. Use only the provided retrieved FAQ/resource evidence and conversation history.
+2. Do not invent facts, sources, URLs, estimates, percentages, years, legal claims, or policy claims.
+3. Do not make policy recommendations or imply NCHS/NHIS advocates for policy. If relevant, state that NCHS/NHIS provide data and others use it.
+4. If this is a repeated question in the same conversation, do not repeat the earlier answer verbatim. Add a new angle, example, or clearer explanation from the evidence.
+5. Keep the answer conversational and useful, like a knowledgeable assistant.
+6. Include source URLs that appear in the evidence when they are relevant.
+7. End with one natural follow-up question or option when helpful.
+"""
+
+
+def compose_resource_answer(
+    question: str,
+    deterministic_answer: str,
+    evidence: Any | None = None,
+    conversation_context: Any | None = None,
+    use_model: bool = False,
+) -> Tuple[str, Dict[str, Any]]:
+    """Compose a dynamic, source-grounded FAQ/resource answer.
+
+    Unlike estimate polishing, this intentionally allows varied wording for FAQ/resource
+    answers while still limiting the model to retrieved approved evidence.
+    """
+    status = get_openai_status(requested=use_model)
+    meta: Dict[str, Any] = {
+        "openai": status,
+        "used_model": False,
+        "fallback_to_deterministic": True,
+        "reason": "not_requested_or_not_configured",
+        "mode": "resource_grounded_composition",
+    }
+    if not status["effective_enabled"]:
+        if use_model and not status["api_key_present"]:
+            meta["reason"] = "OPENAI_API_KEY_not_set"
+        return deterministic_answer, meta
+    try:
+        client = _load_openai_client()
+        payload = {
+            "question": question,
+            "draft_answer": deterministic_answer,
+            "retrieved_evidence": evidence or {},
+            "conversation_context": conversation_context or {},
+        }
+        response = client.responses.create(
+            model=status["model"],
+            instructions=RESOURCE_SYSTEM_PROMPT,
+            input=json.dumps(payload, ensure_ascii=False),
+            temperature=0.45,
+        )
+        text = getattr(response, "output_text", None)
+        if not text or not str(text).strip():
+            meta["reason"] = "empty_model_output"
+            return deterministic_answer, meta
+        meta.update({"used_model": True, "fallback_to_deterministic": False, "reason": "ok"})
+        return str(text).strip(), meta
+    except Exception as exc:
+        meta["reason"] = "openai_resource_compose_failed"
+        meta["error_type"] = type(exc).__name__
+        meta["error_message"] = str(exc)[:500]
+        return deterministic_answer, meta

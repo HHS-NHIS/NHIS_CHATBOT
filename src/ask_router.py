@@ -2,9 +2,10 @@ from __future__ import annotations
 from normalize_text import normalize_text
 from retrieve_estimate import retrieve
 from faq_retriever import answer_faq, looks_like_faq_question
-from model_orchestrator import polish_answer
+from model_orchestrator import polish_answer, compose_resource_answer
 from conversation_state import new_conversation_id, get_context, clear_context, update_from_result, summarize_context
 from followup_resolver import looks_like_followup, build_resolved_question, suggested_followups
+from insurance_special import looks_like_insurance_topic_status_question, insurance_topic_status_response
 
 ESTIMATE_TERMS = [
     "percent", "percentage", "estimate", "how many", "how much", "rate", "prevalence", "ci",
@@ -90,6 +91,54 @@ def looks_like_estimate_question(question: str) -> bool:
     return False
 
 
+def _is_vague_only(question: str) -> bool:
+    q = normalize_text(question).strip(" ?!.:")
+    exact_vague = {
+        "tell me more", "more", "more information", "more info", "more detail",
+        "explain more", "expand", "can you expand", "what else", "say more",
+        "go on", "continue", "why", "how so"
+    }
+    prefix_vague = ["tell me more", "more detail", "more information", "explain more", "can you expand", "say more"]
+    return q in exact_vague or any(q.startswith(v + " ") for v in prefix_vague)
+
+
+def _looks_like_contextual_modifier(question: str) -> bool:
+    q = normalize_text(question).strip()
+    starters = ["what about", "how about", "and", "now", "instead"]
+    if any(q.startswith(s) for s in starters):
+        return True
+    if q.startswith("by ") or q.startswith("show by ") or q.startswith("show me by "):
+        return True
+    # "Show last 2 years" and similar are follow-up modifiers unless a new topic is named.
+    if q.startswith("show") and any(p in q for p in ["last 2 years", "last two years", "all years", "latest", "last year", "by "]):
+        if not any(t in q for t in COMMON_ESTIMATE_TOPICS):
+            return True
+    return False
+
+
+def _strong_new_lane(question: str) -> str | None:
+    """Return a lane when a new question should override prior context.
+
+    Vague prompts and pure modifiers inherit context. Explicit new estimate/FAQ/teen
+    signals switch lanes even if they occur after a different prior answer type.
+    """
+    if _is_vague_only(question) or _looks_like_contextual_modifier(question):
+        return None
+    q = normalize_text(question)
+    # Teen participation/resource questions should go to FAQ/resource, not teen estimate redirect.
+    if looks_like_participation_or_impact_faq(question):
+        return "faq"
+    if looks_like_teen_question(question):
+        return "teen"
+    if looks_like_insurance_topic_status_question(question):
+        return "estimate"
+    if looks_like_estimate_question(question):
+        return "estimate"
+    if looks_like_faq_question(question) or "nhis" in q:
+        return "faq"
+    return None
+
+
 def _merge_common_payload(result: dict, question: str, mode: str) -> dict:
     result.setdefault("question", question)
     result.setdefault("mode", mode)
@@ -114,10 +163,12 @@ def _store_and_attach(cid: str, original: str, resolved: str, result: dict, cont
     return _attach_interactive_payload(result, cid, original, resolved, context_meta, new_context)
 
 
-def _faq_answer(q: str, q_original: str, cid: str, context_meta: dict, debug: bool, use_model: bool, mode: str = "faq") -> dict:
-    faq = answer_faq(q, debug=debug)
+def _faq_answer(q: str, q_original: str, cid: str, context_meta: dict, debug: bool, use_model: bool, mode: str = "faq", prior_context: dict | None = None) -> dict:
+    faq = answer_faq(q, debug=debug, conversation_context=prior_context or {})
     if faq.get("status") == "ok":
-        polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
+        # FAQ/resource answers are allowed to be conversationally composed from approved retrieved evidence.
+        # Estimates still use the stricter polish_answer path below.
+        polished, model_meta = compose_resource_answer(q, faq["answer"], evidence=faq, conversation_context=prior_context or {}, use_model=use_model)
         faq["answer"] = polished
         faq["model"] = model_meta
     faq = _merge_common_payload(faq, q_original, mode)
@@ -144,8 +195,10 @@ def ask(
     resolved_question = q_original
     context_meta = {"used_followup_context": False}
 
-    # V2 router priority: resolve vague/contextual follow-ups before estimate routing.
-    if looks_like_followup(q_original, prior_context):
+    # V2C conversation controller: explicit new lane signals override prior context;
+    # vague prompts inherit the previous lane.
+    strong_lane = _strong_new_lane(q_original)
+    if strong_lane is None and looks_like_followup(q_original, prior_context):
         resolved_question, context_meta, direct_response = build_resolved_question(q_original, prior_context or {}, use_model=use_model)
         if direct_response is not None:
             direct_response = _merge_common_payload(direct_response, q_original, direct_response.get("mode", "followup"))
@@ -155,7 +208,17 @@ def ask(
 
     # Participant/impact questions use approved FAQ/resource index before estimate engine.
     if looks_like_participation_or_impact_faq(q):
-        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
+        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq", prior_context=prior_context)
+
+    # Insurance as both topic and status/breakout gets an explicit deconfliction path.
+    if looks_like_insurance_topic_status_question(q):
+        result = insurance_topic_status_response(q)
+        if result.get("status") == "ok":
+            polished, model_meta = polish_answer(q, result["answer"], evidence=result, use_model=use_model)
+            result["answer"] = polished
+            result["model"] = model_meta
+        result = _merge_common_payload(result, q_original, result.get("mode", "estimate"))
+        return _store_and_attach(cid, q_original, q, result, context_meta)
 
     # Teen estimates intentionally remain outside adult/child SHS prototype for now.
     if looks_like_teen_question(q):
@@ -184,7 +247,7 @@ def ask(
 
         # If clearly documentation/FAQ, try FAQ after estimate miss.
         if looks_like_faq_question(q):
-            return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
+            return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq", prior_context=prior_context)
         est["mode"] = "estimate_not_found"
         est.setdefault("why", [])
         est["why"].insert(0, "This looked like an estimate request, but no matching row was found in the current DHIS adult/child SHS files.")
@@ -193,12 +256,12 @@ def ask(
 
     # Route general NHIS questions to FAQ retrieval.
     if looks_like_faq_question(q) or "nhis" in normalize_text(q):
-        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq")
+        return _faq_answer(q, q_original, cid, context_meta, debug, use_model, mode="faq", prior_context=prior_context)
 
     # Safe default: FAQ first. Avoid treating very vague text as SHS estimate unless there is a stronger signal.
     faq = answer_faq(q, debug=debug)
     if faq.get("status") == "ok":
-        polished, model_meta = polish_answer(q, faq["answer"], evidence=faq, use_model=use_model)
+        polished, model_meta = compose_resource_answer(q, faq["answer"], evidence=faq, conversation_context=prior_context or {}, use_model=use_model)
         faq["answer"] = polished
         faq["model"] = model_meta
         faq = _merge_common_payload(faq, q_original, "faq")

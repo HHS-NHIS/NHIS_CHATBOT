@@ -178,7 +178,7 @@ def _wants_more_detail(question: str) -> bool:
         "what else", "say more", "additional information", "go on", "continue"
     ])
 
-def answer_faq(question: str, debug: bool = False) -> dict:
+def answer_faq(question: str, debug: bool = False, conversation_context: dict | None = None) -> dict:
     results = search_faq(question)
     if not results or results[0]["score"] < 0.25:
         answer = (
@@ -196,6 +196,16 @@ def answer_faq(question: str, debug: bool = False) -> dict:
     top = results[0]
     lines = []
     detail_mode = _wants_more_detail(question)
+    conversation_context = conversation_context or {}
+    repeat_count = int(conversation_context.get("faq_repeat_count") or 0)
+    prior_type = conversation_context.get("answer_type")
+    # Even without OpenAI, repeated resource questions should not feel like a canned copy/paste.
+    # Use a deterministic alternate framing when the same resource lane is revisited.
+    if repeat_count >= 1 or detail_mode:
+        if prior_type in {"participation_resource", "general_nhis_faq"}:
+            lines.append("Building on that, here is another way to think about it using the approved NHIS resource index:")
+            lines.append("")
+
     if detail_mode and len(results) > 1:
         lines.append("Here is a little more detail from the approved NHIS resource index:")
         lines.append("")
@@ -220,6 +230,18 @@ def answer_faq(question: str, debug: bool = False) -> dict:
                 lines.append(f"- {r['title']}: {r['url']}")
             else:
                 lines.append(f"- {r['title']}")
+    if not debug:
+        qn = normalize_text(question)
+        lines.append("")
+        if any(p in qn for p in ["particip", "selected", "what is in it", "what's in it", "benefit"]):
+            lines.append("Would you like the privacy/security explanation or examples of how NHIS data have helped people?")
+        elif any(p in qn for p in ["privacy", "confidential", "secure"]):
+            lines.append("A useful next question is: what should a selected participant expect during the interview?")
+        elif any(p in qn for p in ["impact", "helped", "benefit", "diabetes", "asthma", "cancer", "insulin", "hearing"]):
+            lines.append("I can also give examples by topic, such as cancer screening, asthma, diabetes, insulin costs, or hearing aids.")
+        else:
+            lines.append("I can also summarize the source, explain the privacy angle, or connect this to available NHIS data tools.")
+
     if debug:
         lines.append("")
         lines.append("FAQ retrieval details:")
@@ -244,5 +266,5 @@ def answer_faq(question: str, debug: bool = False) -> dict:
     return {
         "status": "ok", "mode": "faq", "answer": "\n".join(lines),
         "citations": citations, "source_cards": source_cards, "why": why,
-        "debug": {"results": results}
+        "debug": {"results": results, "faq_repeat_count": repeat_count, "prior_answer_type": prior_type}
     }

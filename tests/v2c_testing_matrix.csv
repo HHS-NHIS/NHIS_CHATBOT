@@ -1,0 +1,23 @@
+sequence_id,turn,query,expected_track,expected_behavior
+faq_repeat,1,Why should I participate in NHIS?,faq_resource,Answers from approved resource index
+faq_repeat,2,Why should I participate in NHIS?,faq_resource,Does not repeat exact same canned response; adds alternate framing/detail
+faq_more,1,Why should I participate in NHIS?,faq_resource,Participation FAQ answer
+faq_more,2,tell me more,faq_resource,Stays in participation/resource lane and expands prior answer
+lane_switch_teen,1,Why should I participate in NHIS?,faq_resource,FAQ/resource lane
+lane_switch_teen,2,What percent of teens had asthma last year?,teen_redirect,Switches to teen estimate redirect rather than getting stuck in FAQ lane
+lane_switch_estimate,1,Why should I participate in NHIS?,faq_resource,FAQ/resource lane
+lane_switch_estimate,2,What percent of adults had diabetes last year?,estimate,Switches to deterministic SHS estimate lane
+lane_switch_faq,1,What percent of adults had diabetes last year?,estimate,Estimate lane
+lane_switch_faq,2,Why should I participate in NHIS?,faq_resource,Switches to FAQ/resource lane rather than staying in estimate context
+estimate_followup,1,What percent of adults had diabetes last year?,estimate,Adult diabetes estimate
+estimate_followup,2,What about by SVI?,estimate,Stays in estimate lane and resolves to diabetes by SVI
+estimate_followup,3,Show last 2 years.,estimate,Stays in estimate lane and uses prior topic/grouping
+teen_participation,1,Why should teens participate?,faq_resource,Teen participation question routes to resource/FAQ not teen estimate redirect
+teen_participation,2,tell me more,faq_resource,Stays in teen/participation resource context
+teen_estimate,1,What percent of teens had asthma last year?,teen_redirect,Teen estimate redirects to Teen SHS tool
+insurance_special_adult,1,How many people had insurance by insurance status?,insurance_special,Uses insurance topic/status deconfliction rather than not_found
+insurance_special_child,1,What percent of children had insurance by insurance status?,insurance_special,Uses child insurance special handling rather than not_found
+insurance_covariate,1,What percent of adults had asthma by insurance status?,estimate,Insurance is treated as covariate/grouping because asthma is the topic
+overlap_uninsured,1,Uninsured kids got a flu shot last year,estimate,Flu shot remains topic; uninsured is subgroup/covariate cue
+overlap_uninsured_topic,1,Kids were uninsured last year,estimate,Uninsured remains topic
+ambiguous_no_context,1,tell me more,clarification_or_safe_fallback,Does not invent an estimate when no prior context exists

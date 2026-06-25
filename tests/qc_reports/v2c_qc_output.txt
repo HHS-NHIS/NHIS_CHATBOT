@@ -1,0 +1,21 @@
+PASS: faq_repeat_turn1_ok
+PASS: faq_repeat_turn2_varied
+PASS: tell_me_more_after_faq_stays_faq
+PASS: tell_me_more_not_shs_fallback
+PASS: faq_to_teen_estimate_switch
+PASS: faq_to_adult_estimate_switch
+PASS: estimate_to_faq_switch
+PASS: diabetes_estimate_ok
+PASS: diabetes_by_svi_followup_ok
+PASS: show_last_2_years_followup_ok
+PASS: teen_participation_routes_faq
+PASS: teen_participation_tell_more_routes_faq
+PASS: teen_estimate_redirect
+PASS: insurance_topic_status_adult_special
+PASS: insurance_topic_status_child_special
+PASS: insurance_covariate_still_works
+PASS: uninsured_kids_flu_shot_topic_deconflict
+PASS: kids_uninsured_topic_deconflict
+PASS: no_context_tell_me_more_safe
+
+V2C conversational orchestrator QC: 19 / 19 passed

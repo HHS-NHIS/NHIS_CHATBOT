@@ -1,0 +1,15 @@
+PASS participation first turn routes FAQ faq
+PASS tell me more inherits participation context Why should I participate in NHIS? tell me more
+PASS tell me more did not fall to estimate fallback faq
+PASS adult diabetes routes estimate estimate
+PASS SVI follow-up routes estimate with context What percent of adults had Diagnosed diabetes 2024 by SVI?
+PASS last 2 years follow-up routes estimate with context What percent of adults had Diagnosed diabetes last 2 years?
+PASS teen participation routes FAQ faq
+PASS teen estimate routes redirect teen_redirect
+PASS approved_urls.csv exists 
+PASS approved_documents folder exists 
+PASS generated faq index exists 
+PASS resource builder exists 
+PASS prod UI has GPT-like chat container 
+PASS embed UI has chat container 
+V2A/B QC: 14 / 14 passed
